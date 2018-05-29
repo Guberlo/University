@@ -1,0 +1,18 @@
+Gli array e i puntatori non sono esattamente la stessa cosa: E' vero che gli
+array sono inizializzati da puntatori. Il nome dell'array è una costante
+(puntatore) che punta al primo elemento dell'array
+
+I puntatori possono essere utilizzati anche per puntare a delle locazioni in
+memoria contentente funzioni: nel seguente modo <tipo restituito> <tipo puntatore> <nome> <parametro in entrata>
+
+star=1;
+i=1;
+for(j=2;j<=n;j++)
+  if(conosci(i,j))
+    star=j;
+    i=j
+
+Prendo due persone, se A conosce B vuol dire che A non può essere la star e
+quindi la scarto Se A non conosce B, B non può essere la star quindi la scarto.
+Alla fine mi rimarrà solamente una persona e visto che ho supposto che deve
+esistere almeno una star l'ultima sarà proprio questa.

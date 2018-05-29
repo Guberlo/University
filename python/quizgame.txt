@@ -1,0 +1,10 @@
+Quanti anni ha Salvo?
+19
+Ha preso la patente?
+Si
+Ha la macchina?
+Si
+E' fidanzato?
+Si
+In che città abita?
+Belpasso

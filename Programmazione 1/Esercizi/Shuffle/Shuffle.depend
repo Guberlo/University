@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1512596430 source:/home/guberlo/Documenti/code/Shuffle/main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+

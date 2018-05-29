@@ -1,0 +1,46 @@
+un albero è un insieme di nodi ed è una generalizzazione di una lista.
+
+il nodo principale viene chiamato radice, dal quale discendono 0 o più sotto alberi, un nodo che non ha archi(che non
+genera nulla) viene chiamato foglia.
+
+albero binario - al massimo 2 figli per ogni nodo
+albero nario - al massimo n figli per nodo
+
+I nodi da cui si diramano rami vengono chiamati padri, i sottostanti vengono chiamati figli.
+
+Se i nodi figli dello stesso padre(che giacciono sullo stesso piano) sono detti fratelli.
+
+Il livello di un nodo indica la sua distanza dalla radice.
+
+Con profondità di un albero indichiamo il percorso più lungo dalla radice ad una foglia
+
+Se ci troviamo al livello i, i possibili nodi presenti possono essere 2^i.
+
+Base (radice): 2^0=1
+
+visto che al prossimo livello ci possono essere 2*2^k = 2^k+1
+
+Se vogliamo sapere quanti nodi ci sono all'interno di un albero con i livelli:
+
+Sommatoria per i=0 a k di 2^i == 2^k+1 - 1
+                  .
+                  .
+Che è uguale a sommatoria da i=0 a k-1 di 2^i +2^k.
+
+
+
+
+Complessità visita InOrder:
+
+t(n)= {c(costante) se n = 0}
+      {t(k) + t(n-k-1) + d se n != 0}
+
+dimostare che:
+
+t(n)<=(c+d)n+c
+
+per induzione:
+
+BASE: t(n=0) ==> c<=c
+
+t(n) = t(k) + t(n-k-1) + d <= (c+d)k + c +(c+d) (n-k-1) + c + d <= (c+d)(n-1) +2c + d <= (c+d)n + c = (c+d)n + c

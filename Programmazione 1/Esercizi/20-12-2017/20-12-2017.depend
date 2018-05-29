@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1521202640 source:/home/guberlo/Documenti/code/20-12-2017/main.cpp
+	<iostream>
+	<stdlib.h>
+	<iomanip>
+	<time.h>
+	<limits>
+
