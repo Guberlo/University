@@ -1,0 +1,19 @@
+Il design pattern Singleton permette di assicurarci che una classe abbia soltanto
+un'istanza che può essere creata e su cui si possa lavorare.
+Una motivazione a questo comportamento potrebbe essere che dei programmi, come
+ad esempio un file system hanno bisogno di una sola istanza su cui lavorare.
+
+Per poter attuare questo design pattern avremo bisogno di creare una classe
+il cui comportamento sarà:
+  -Ritornare tramite il metodo getInstance() l'unico oggetto creato.
+  -Avere una variabile privata statica che rappresenta l'oggetto.
+  -Avere un costruttore privato
+
+  |--------------------|
+  |-obj:Singleton      |
+  |-variabili          |
+  |--------------------|
+  |-Singleton()        |
+  |+getInstance:Singleton
+  |singletonOperation()|
+  |--------------------|

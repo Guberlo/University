@@ -1,0 +1,70 @@
+Design Pattern Adapter
+
+Si dividono in:
+-Creazionali (Factory Method)
+-Comportamentali
+-Strutturali
+
+-Semplici
+-Medi
+-Complessi
+
+Intento dell'adapter: convertire l'interfaccia di una classe in un'altra.
+Permette ad una classe di interagire con un'altra.
+
+Un tipo di problema potrebbe essere che non vi è una corrispondenza tra client
+e libreria:
+  -Non corrisponde il tipo
+  -Non corrisponde il nome
+  -Non corrisponde il parametro
+
+E' composto da:
+  -Interfaccia target (cio che il client si aspetta)
+  -Adaptee l'oggetto della libreria
+  -Adapter converte la chiamata del client a quello che si aspetta la libreria.
+    Essa deve implementare la classe target
+
+Associazione UML:
+  c'è una dipendenza tra due classi, si deve avere il codice della seconda per
+  compilare la prima.
+  La classe può avere o un attributo di tipo B, una variabile di tipo B all'interno
+  o un parametro in input in una funzione nella classe.
+
+Che significa che fa l'adattamento?
+  Significa che all'interno del metodo di adapter viene implementato il metodo request
+  dove verrà chiamato il metodo di adaptee
+
+ Lazy Initialization
+  Consiste nell'istanziare l'oggetto il più tardi possibile, ovvero quando devo
+  invocare il metodo che mi interessa.
+
+
+Class Adapter
+  Variante di adapter in cui l'adapter deriva dall'adaptee e implementa il target.
+  In questo modo iil client può chiamare direttamente la specificRequest().
+
+Adapter a due vite:
+  Offro due modi diversi di chiamare la funzione, sia funzione da libreria, sia
+  da adaptee.
+
+Se voglio utilizzare lazy initialization e adapter a due vie devo utilizzare
+l'object adapter
+
+Indirettezza:
+  Avviene una chiamata su un oggetto e questo fa a sua volta un'altra chiamata.
+  L'interazione tra due oggetti è simboleggiata da una linea che li unisce.     (direttamente accoppiato)
+  se ci sono uno o più intermediari tra le chiamate indirettamente accoppiato.
+  Il numero delle indirettezze è pari al numero di intermediari.
+
+L'adapter è un buon posto dove implementare i test di una precondizione o una postcondizione
+  Precondizione: condizione che deve essere necessariamente soddisfatta prima di eseguire una prozione di codice
+  Postcondizioni: condizioni che saranno verificate se dopo l'esecuzione di un metodo è andata a buon fine
+
+Programmazione difensiva:
+  Controlli a run-time
+
+Dopo aver scritto i requisti facciamo un'analisi grammaticale e:
+  I sostantivi più importanti molto probabilmente saranno delle classi,quelli meno saranno gli attributi
+  I verbi saranno i metodi delle classi.
+
+  Raggruppare algoritmi e dati che agiscono tra loro

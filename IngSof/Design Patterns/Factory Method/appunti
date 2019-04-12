@@ -1,0 +1,22 @@
+Il factory Method è un design pattern che permette di evitare l'istanziazione
+di oggetti di cui non si conosce la classe a run time al client.
+
+Quello che si deve fare è definire un'interfaccia per creare un oggetto ma lasciare
+che le sottoclassi decidano che tipo di classe istanziare.
+
+Il factory Method è così composto:
+  -interfaccia Product: è l'interfaccia comune degli oggetti
+  -classe concreteProduct: è una specifica implementazione di product
+  -interfaccia Creator: è l'interfaccia che dichiara il factoryMethod(), ritorna un oggetto di tipo Product
+  -class ConcreteCreator: implementa lo specifico factoryMethod() scegliendo quale oggetto istanziare e ritornandolo
+
+
+                              |Product|                                        |Creator|
+                                  ^                                                ^
+                                  |                                                |
+                                  |                                                |
+                        -----------------------                              ConcreteCreator
+                        |                     |                                     |
+                  ConcreteProduct1      ConcreteProduct2                            |
+                                                                                    |
+                 ^-----              OR        ^------------------------------------                                     

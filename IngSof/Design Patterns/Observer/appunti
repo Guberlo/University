@@ -1,0 +1,39 @@
+L'Observer è un design pattern è un pattern che punta definire una dipendenza uno a molti tra oggetti.
+Esso permette di notificare tutti gli oggetti dipendenti da un altro oggetto quando quest'ultimo cambieràà stato(Es. Bloccare la spesa perché è troppo alta)
+
+Ci fa evitare l'accoppiamento troppo stretto tra le classi
+
+I ruoli sono:
+Observer                       ConcretObserver
+            e possiamo avere
+Subject                        ConcreteSubject
+
+Gli oggetti observer sono gli oggetti che sono interessati al cambiamento di stato degli oggetti Subject
+
+Subject è una classe che definisce:
+Attach(Observer) permette ad un oggetto che vuole osservare lo stato di comunicare che vuole osservafre lo stato,
+prende in input un oggetto observer
+Detach(Observer) permette di non ricevere più le notifiche per il cambiamento di stato
+Notify() avvia la notifica del cambiamento di stato
+Tiene una lista di oggetti che devono essere osservati, con attach inseriamo e con detach lo rimuoviamo
+
+Observer è un'interfaccia che definisce il metodo Update()
+
+ConcreteSubject è una class sottoclasse di subject, al suo interno implementa quello che serve per tenere
+lo stato a cui sono interesasti gli observer
+Quando avverà un cambiamento di stato esso verrà notificato tramite il metodo che ha cambiato lo stato
+che chiamerà il metodo Notify()
+Esso ha un attributo che monitora lo stato della classe.
+Ha un metodo getState() che restituisce lo stato
+Un metodo setState() che modifica lo state e chiama notify
+
+ConcreteObserver è un'implementazione dell'interfaccia observer, implementa il metodo update()
+Essa ha un attributo che può essere una copia o una rielaborazione dell'attributo della ConcreteSubject
+
+Dentro i Concrete abbiamo inserito metodi e attributi che dipendono dall'applicazione, così non è per
+le altre due entità
+
+modalità pull quando l'observer dopo la modifica dello state richiede lo stato
+modalità push quando l'observer fa richiesta
+
+quando l'observer fa alcune operazioni sull'observertState che non è stata implementata nel subject deve fare una chiamata a seState()

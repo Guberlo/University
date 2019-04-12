@@ -1,0 +1,19 @@
+Diagrammi Attività:
+
+La barra che precede il crearsi di due attività viene chiamata barra di fork
+Quando le due attività finiscono e vanno a conggiungersi viene rappresentata la barra di sincronizzazione
+L'attività successiva alla barra di sincronizzazione verrà eseguita solo se entrambe le attivbità hanno finito
+
+Il rombo simboleggia una condizione, per indicare che strada prendo inserisco una frase vicino alla freccia
+In base alla strada presa si verificherà un'attività
+
+Se il nel rombo "entrano" due freccie  questo indica la riunificazione dle flusso (se entrambe le attività hanno lo stesso punto di uscita)
+
+La corsia specifica chi è il responsabile di quell'attività
+
+Uno stato è una certa combinazione dei dati di un oggetto
+
+La transizione tra due stati potrebbe essere avverata se viene soddisfatta una condizione di guardia
+
+Uno stato può essere composto o semplice:
+Se nella rappresentazione dello stato esso è diviso orizzontalmente da una linea tratteggiata significa che esso è uno stato composto parallelo

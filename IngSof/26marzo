@@ -1,0 +1,13 @@
+Un'interfaccia è l'insieme delle dichiarazioni dei metodi, non sono presenti i
+costruttori e non vengono inseriti attributi non inizializzati.
+Chi verrà chiamato è chi in realtà implementa quel contratto con l'interfaccia.
+Non vengono definiti i metodi privati in quanto non sarebbero utilizzati da nessuno
+
+
+Per definire la classe che implementa l'interfaccia si usa la keyword implements.
+
+Per indicare una classe astratta devo inserire la keyword abstract sia sulla
+dichiarazione della classe che sul metodo
+
+Se utilizzo una variabile di tipo più generale mi sto legando al tipo più generale
+e non al tipo più generalizzato. Posso riferirmi a qualsiasi sottoclasse.

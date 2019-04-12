@@ -16,7 +16,7 @@ Extras:
 name= input("Inserisci il tuo nome: ")
 age= input("Inserisci la tua eta': ")
 age=int(age)
-if age != 0:
+if age > 0:
     print("Caro "+name+", tra 100 anni avrai esattamente",age+100,"anni!!!")
 else:
     print("Non puoi inserire 0 come eta'!!")

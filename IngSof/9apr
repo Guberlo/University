@@ -1,0 +1,18 @@
+Design Pattern State:
+  L'intento è quello di cambiare il comportamento di un oggetto quando il suo stato interno cammbia.
+
+  Il problema che si vuola affrontare è che spesso una parta di codice che si vuole
+  eseguire dipende da una variabile di stato
+
+
+  Classe Contex definisce la classa a cui il client deve rivolgersi per definire lo stato corrente
+
+  L'interfaccia State
+  Le sotto classi che implementano i vari stati ConcreteStateA, ConcreteStateB
+
+  Lo stato corrente è tenuto da Context che ha un attributo di tipo ConcreteState
+
+  Il client non deve consocere né l'interfaccia né le sottoclassi
+
+Tecnica di refactoring Replace Conditional with Polymorphism:
+  Sostituisce i rami condizionali usufruendosi del polimorfismo

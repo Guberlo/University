@@ -1,0 +1,55 @@
+non usare la new nel client perché in questo modo essa ha tre responsabilità:
+  -Creare nuovo oggetto
+  -Decidere di che tipo è
+  -Decidere di che classe è
+
+La classe Arrays mi da il supporto della funzione asList() che trasforma questi
+elementi in elementi per una lista
+
+Se mettiamo un asterisco vicino alla frecce possiamo arrivare con un'istanza
+possiamo arrivare a illimitate istanze dell'altra classe
+
+Se mettiamo un numero ciascuna istanza di A può onteragire con x istanze di B
+
+Nome ruolo:
+                    richiesto
+  ad esempio Ordine------->Prodotto è una forte indicazione
+
+  Nome dell'associazione:
+    Mi permette di leggere l'associazione tra le classi interessate
+             scritto
+      Persona----->Ordine
+    Posso aggiungere un verso al nome dell'associazione, esso è diverso dalla
+    navigabilità
+
+L'aggregazione è indicata con un rombo(diamond) vuoto
+  A<>----->B A aggrega B
+  Da sola A è priva di significato se non esiste B
+
+La composizione è indicata con un rombo(diamon) pieno
+  A<#>------>B A compone B
+  L'istanza di B non avrebbe senso di esistere senza A
+
+Se accanto al tipo di dato dichiarato in uml aggiungo le parentesi quadre posso
+specificare un vincolo che deve essere rispettato
+
+Gli stereotipi si usano per definrire nuovi elementi o specificare tipi di relazioni
+  <<interface>> ad esempio
+
+Per specificare come la classe A usa b utilizzo le linee tratteggiate e al di sopra
+specifico l'azione.
+    <<call>>
+  A--------->B
+
+
+  Design Pattern Facade (Facciata)
+
+  L'obiettivo del facade è quello di offrire un'intergaccia semplificata ad una
+  serie di sottoclassi.
+  Anziché fare lavorare il client a lavorare con più classi costringo il client ad
+  utilizzare un'interfaccia semplificata in modo tale da non avere un client complicato
+
+  Il facade nasconde l'implementazione del sottosistema
+
+  Anche dal punto di vista della compilazione ho un vantaggio, in quanto dovrò
+  andare a compilare le parti interessati ed il facade e non i vari client.

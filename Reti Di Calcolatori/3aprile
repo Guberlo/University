@@ -1,0 +1,46 @@
+E' bene avere una macchina con installazione pulita e poi lavorare sui cloni in
+modo che se qualcosa va male possiamo eliminare solo i cloni avendo la macchina base
+
+Quando si clona una macchina bisogna inizializzare nuovamente il mac address.
+Il clone creato dovrà essere collegato in modo da livberare spazio
+Due macchine possono comunicare solo se sono sulla stessa lan fisica
+
+nel clone andiamo su network impostiamo rete interna e impostiamo il nome della scheda
+facciamo lo stesso nel secondo clone lasciando come nome lo stesso
+
+per comunicare una macchina ha bisogno di:
+  -ip (byte meno significativi indivuduano il dettaglio)
+  -gateway
+  -maschera
+
+Esiste un range di indirizzi privato che ha come primi byte 10. Sono utilizzabili liberamente
+perché i router seri non li fanno accedere
+
+ps ax |grep dhc (vede se esiste il servizio dhcp)
+ip addr ci fa vedere la configurazione di tutte le schede di rete della macchina
+lO è un'interfaccia virtuale ha sempre l'indirizzo 127.0.0.1/8<- rappresenta la maschera
+
+enp0s3 = p0s3 indica la posizione fisica della scheda nel bus
+
+per impostare il proprio ip utilizzare prima dhclient -x
+verificare che dhcp sia chiuso con ps -ax |grep dhc
+ed in caso killare il processo
+
+settare l'ip con ip addr add 10.0.0.1/24 dev enp0s3 dove dopo dev si deve inserire la scheda
+
+nel sistema linux all'avvio il kernel cerca di assegnare l'ip con dhcp questo file
+è configurabile andano in /etc/network/interfaces
+
+qui possiamo modificare scrivendo
+iface device inet static
+  addres x.x.x.x
+  netmask 255.255.255.0
+  gateway 192.0.2.254
+
+inserire nel secondo clone un ip diverso
+
+VboxManage clonevm Base --snapshot Snapshot --name A --options link --register
+VboxManage modifyvm A --memory 12 --nic1 intnet --intnet1 lan05 --nic2 none --nic3 none
+
+bash <nomefile> per eseguirlo
+per rendere eseguibile un file si utilizza chmod

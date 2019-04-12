@@ -1,0 +1,6 @@
+la bind serve a collegare una porta al processo.
+Non viene utilizzata nel client perché vi è già la chiamata sendto che assegna già la porta al processo
+mentre nel server la sendto è collocata dopo la recvfrom
+
+la listen prende in input parametro che indica quante connessioni possono essere tenute in sospeso
+la accept è bloccante e si sblocca solo quando viene effettuta la connect che è pure bloccante

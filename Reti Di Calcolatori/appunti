@@ -1,0 +1,34 @@
+socket inizializza la porta,bind se passa un pacchetto su questa porta passalo a me
+
+sockaddr struttura:
+ int che specifica la famiglia
+ int che specifica la porta
+ int che specifica l'address
+ char vuoto(?)
+
+La differenza tra ipv4 e ipv6 sostanzialmente è la presenza di un campo da 1616byte
+
+La funzione pton(Presentation to network) fa la conversione in indirizzo ip come lo conosciamo
+La funzione ntop fa l'inverso.
+
+La funzione socket prende in input la famiglia, il tipo di socket e il protocollo utilizzato(può essere lasciato vuoto) restituisce un intero
+
+La funzione bind prende in input la struttura di riferimento e la lunghezza dell'address
+
+La funzione sendto prende in input la socket, la memoria da cui prendere le informazioni e la lunghezza della memoria, la sockaddr e la lunghezza totale di sockaddr
+La receivefrom prende in input gli stessi parametri ed è una chiamata bloccante
+
+memset è una funzione di libreria che serve a settare la memoria
+
+Lato client:
+  leggo ip e porta
+  invio il pacchetto
+  e mi metto in ascolto per una risposta
+
+Lato server:
+  si divide in due processi:
+  processo che scrive
+  processo che legge
+
+  non ci importa di tutte le complicazioni che derivano dalle race conditions
+  si utilizizza l'accesso condiviso ad un file dove uno legge e uno scrive

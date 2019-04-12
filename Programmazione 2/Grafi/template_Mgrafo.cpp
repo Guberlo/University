@@ -63,12 +63,13 @@ template <class T> Nodo<T>* Lista<T>::search(int indice)
   return NULL;
 }
 
-template <class H> class LGraph
+template <class H> class MGraph
 {
 private:
   int len, n, m;
   H **K;
   int **M;
+  int *d, *p, *c;
 
   int findIndex(H x)
   {
