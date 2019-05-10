@@ -1,0 +1,35 @@
+E' un processo di svilupop agile:
+
+Si da più importanza a:
+-Comunicazione tra gli individui piuttosto che alle cose scritte
+-Possibilità di autoorganizzarsi in modo da migliorare la qualità del codice
+
+Il cliente scrive delle story card(requisiti)
+
+Gli sviluppatori controllano le story card e possono decidere o di approvarla o di rifiutarla
+una story card non può essere implementata in più di 2-3 giorni di lavoro e in non meno di 4 migliorare
+
+La scrittura di storycard si ferma quando riempiamo almeno 15 giorni di lavoro
+
+Non poter affermare di trovare una soluzione per quel problema rappresenta un alto RISCHIO
+
+Esso è pensato ed è attuabile quando il team di sviluppo non è troppo grande
+
+La relase è consegnata solamente al cliente
+
+CRC card (Class Responsabilty Collaboration Card)
+Tante CRC quante classi
+E' divisa in 3 parti, alto nome della classe, la parte a sinistra indica le responsabilità
+la parte destra indica le collaborazioni
+
+test di unità:
+test per la singola classe, vengono effettuati tutti i test sui metodi della classe. Viene fatto in tempo di implementazione
+
+test funzionale, vengono effettuati su più alto livello ovvero dopo la fusione di vari pezzi messi insieme
+
+Pair Programming:
+Si divide la storycard in due invece che in uno solamente, o meglio la storycard sarà assegnata ad una coppia
+Un programmatore scrive, l'altro legge, revisiona e suggerisce all'altro.
+Ill programmatore che scrive viene chiamato driver, il secondo navigator
+
+La crc viene creata quando i programmatori analizzando la story card si rendono conto che è necessario creare una nuova classe

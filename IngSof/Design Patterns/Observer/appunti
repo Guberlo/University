@@ -37,3 +37,7 @@ modalità pull quando l'observer dopo la modifica dello state richiede lo stato
 modalità push quando l'observer fa richiesta
 
 quando l'observer fa alcune operazioni sull'observertState che non è stata implementata nel subject deve fare una chiamata a seState()
+
+per avere più compatibilità tra subject e ConcreteSubject possiamo definire subject come classe astratta
+definendo getState() e setState() in modo che il Concrete Observer non si leghi ad una precisa istanza ConcreteSubject
+Ma ad un generico riferimento a Subject
