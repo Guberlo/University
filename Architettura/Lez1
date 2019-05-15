@@ -1,0 +1,79 @@
+I calcolatori moderni possono essere divisi in 4 categorie:
+  -Calcolatori embedded: Sono integrati in sistemi più grandi e complessi al fine
+   di monitorare o controllare automaticamente un processo fisico. Non possono essere
+   utilizzati per applicativi generici ma solo per applicativi specifici. L'utente può anche
+   non sapere che tipo di funzione svolga un singolo calcolatore embedded.
+
+  -Calcolatori personali: Possono essere utilizzati per svariate attività, ne esistono diversi
+   tipi ad esempio desktop, laptop e workstation(più performanti e utilizzate per scopi scientifici)
+
+  -Server e sistemi enterprise: calcolatori pensati per essere condivisi da un numero molto alto di utenti
+   che vi accedono da remoto. Contengono spesso una grande quantità di dati.
+
+  -Supercalcolatori e calcolatori grid: Sono calcolatori molto più potenti ma allo stesso tempo più costosi.
+   Sono utilizzati nelle elaborazioni più difficili. Le grid sono invece molto più economici e permettono di
+   collegare tra di loro tramite una griglia un gran numero di calcolatori personali.
+
+Il calcolatore è composto da 5 parti:
+  Ingresso
+  Memoria
+  Uscita
+  Controllo
+
+Unità di ingresso:
+  E' un dispositivo che permette l'acquisizione di dati dal mondo esterno.
+  Un esempio potrebbe essere quello della tastiera.
+
+Unità di memoria:
+Ha la funzione di contenere i dati, esistono due famiglie di memorie:
+Primaria:
+  Memoria centrale:
+    -E' una memoria ad accesso veloce che opera alla velocità dei circuiti elettronici.
+     E' formata da un numero molto grande di celle elementari che riescono a contenere
+     l'informazione di un bit, tuttavia le operazioni molto spesso vengono effettuate
+     su un insieme di essi chiamato WORD, una word può essere formata da 8 a 64 bit.
+     La tecnologia che permette di individuare in tempo costante e fissato l'indirizzo
+     di una parola viene chiamata RAM (Random Access Memory)
+
+  Memoria cache:
+    -Gli strati contenenti memorie RAM piccole ma veloci sono chiamati memorie cache.
+     Esse risiedono direttamente sul chip del processore per ottimizzare la velocità.
+     Alcuni dati vengono copiati dalla memoria centrale quando viene eseguita un'istruzione
+     e se nei prossimi cicli queste istruzioni dovessero essere ripetute le troveremo già
+     nella cache.
+
+  Memoria di massa:
+    -Tutti i tipi di memoria che abbiamo visto fin'ora sono purtroppo volatili,
+     ovvero tutti i dati che contiene la memoria verrano cancellati non appena si
+     interrompe il collegamento elettrico. Proprio per risolvere questo problema
+     nascono le memorie di massa che sono invece persistenti.
+
+
+Unità aritmetico logica:
+  -La maggior parte dei calcoli aritmetici vengono svolti al suo interno.
+   Si inizia portandone gli operandi all'interno del processore dove vengono
+   sottoposti all'operazione richiesta. All'interno del processore gli operandi
+   e il risultato vengono scritti in strutture chiamate registri che hanno velocità molto elevate.
+
+
+Unità di uscita:
+  -Ha la funzione di inviare al mondo esterni il risultato di una serie di operazioni
+   un esempio può essere una stampante. Alcuni dispositivi offrono sia input che output
+   allo stesso tempo.
+
+
+Unità di controllo:
+  -Si occupa di coordinare tutte le attività delle altre componenti. Essa genera segnali
+  che scandiscono gli istanti di tempo in cui le varie operazioni devono avere luogo.
+  La maggior parte di questi circuiti sono sparpagliati per tutto il calcolatore
+
+
+Instruction Register:
+  -E' un registro che ha la funzione speciale di contenere e mantenere stabile l'istruzione
+  prelevata
+
+Program Counter:
+  -E' un puntatore alla prossima istruzione da eseguire, mentre si esegue l'istruzione
+   il PC viene aggiornato alla prossima word.
+
+Il meccanismo degli interrupt consente di sospendere su richiesta l'esecuzione dle programma

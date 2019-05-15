@@ -1,0 +1,22 @@
+In questi processi come dice lo stesso nome si effettuano cambiamenti continui
+Si dividono in due tipi:
+
+Processo di sviluppo per esplorazione:
+  Dobbiamo fare l'esplorazione perché non capiamo cosa vogliamo fare.
+  Cerchiamo di realizzare mano a mano dei prototipi anche se non comprendiamo completamente i requisiti.
+  Non abbiamo una chiara visione di quello che bisogna fare e nemmeno del tempo. Da utilizzare solo quando
+  non abbiamo altra soluzione ma teniamo al lavoro ed il cliente non sa esattamente cosa vuole.
+  E' da utilizzare solo per una parte del sistema e non per tutto.
+
+Processo build and fix:
+  Documentazione molto limitata, non abbiamo capito bene nessun requisito o requisiti molto complicati da scrivere.
+  Tentiamo uno sviluppo che immaginiamo possa essere adatto a quello che ci ha detto il cliente.ù
+  Anche questo da applicare solamente ad una sola parte del sistema altrimenti sarebbe troppo rischioso.
+  Gli mostriamo l'implementazione e aggiusteremo mano a mano a seconda di quello che dice il cliente.
+
+  Tempi troppo lunghi
+  Sistemi difficilmente comprensibili, poco chiari
+  Mancanza di visione dell'insieme
+
+  Ci serve solo a capire cosa fare, appena abbiamo finito riscriviamo tutto o applichiamo il refactoring
+  

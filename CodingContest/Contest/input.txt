@@ -1,100 +1,100 @@
-3 3
-4 3
-3 1
-4 6
-4 5
-5 1
-6 7
-4 7
-3 4
-7 4
-6 9
-4 1
-4 1
-5 11
-6 16
-4 5
-3 3
-3 2
-5 5
-4 5
-3 3
-5 3
-7 17
-3 2
-3 2
-7 5
-7 16
-6 5
-6 3
-7 3
-6 2
-4 4
-5 8
-3 2
-3 4
-3 4
-5 9
-4 6
-5 9
-5 6
-5 2
-4 4
-7 6
-4 8
-5 11
-7 4
-6 18
-5 9
-3 4
-3 3
-6 4
-5 12
-5 9
-5 3
-3 1
-5 8
-6 8
-5 2
-5 11
-4 3
-6 2
-3 2
-5 5
-6 15
-6 6
-7 18
-5 8
-5 12
-5 1
-6 18
-4 2
-7 3
-3 1
-3 3
-6 18
-3 4
-5 9
-7 8
-7 2
-4 8
-4 8
-6 15
-5 1
-3 2
-4 8
-3 2
-6 16
-3 4
-7 8
-5 2
-3 3
-3 2
-7 14
-6 10
-6 1
-3 4
-3 4
-3 2
-3 4
-4 7
+int 10 2 ins:276 ins:267 ins:184 ins:210 ins:111 ins:118 ins:34 ins:167 ins:218 ins:225 210 267
+int 10 2 ins:55 ins:164 ins:213 ins:28 ins:255 ins:181 ins:4 ins:116 ins:205 ins:13 13 116
+int 10 2 ins:203 ins:29 ins:82 ins:252 ins:226 ins:255 ins:152 ins:22 ins:286 ins:79 203 29
+int 10 2 ins:177 ins:22 ins:152 ins:80 ins:51 ins:273 ins:17 ins:265 ins:239 ins:7 177 22
+int 11 2 ins:169 ins:214 ins:295 ins:167 ins:60 ins:170 ins:56 ins:226 ins:122 ins:199 ins:296 199 169
+int 11 2 ins:112 ins:150 ins:85 ins:249 ins:68 ins:296 ins:173 ins:285 ins:19 ins:4 ins:29 85 112
+int 11 2 ins:181 ins:85 ins:219 ins:95 ins:195 ins:45 ins:194 ins:47 ins:96 ins:163 ins:126 219 85
+int 12 2 ins:0 ins:120 ins:169 ins:12 ins:67 ins:25 ins:119 ins:145 ins:220 ins:136 ins:146 ins:60 67 145
+int 12 2 ins:23 ins:208 ins:117 ins:33 ins:234 ins:86 ins:221 ins:281 ins:70 ins:100 ins:164 ins:129 208 100
+int 12 2 ins:155 ins:57 ins:273 ins:135 ins:261 ins:258 ins:134 ins:161 ins:122 ins:183 ins:17 ins:46 155 261
+int 13 2 ins:189 ins:92 ins:281 ins:295 ins:117 ins:24 ins:132 ins:134 ins:126 ins:290 ins:137 ins:245 ins:7 245 137
+int 14 2 ins:99 ins:152 ins:33 ins:70 ins:79 ins:229 ins:225 ins:180 ins:130 ins:217 ins:134 ins:250 ins:42 ins:45 250 130
+int 14 2 ins:48 ins:86 ins:192 ins:184 ins:250 ins:274 ins:81 ins:60 ins:78 ins:153 ins:68 ins:122 ins:208 ins:115 153 192
+int 15 2 ins:233 ins:68 ins:3 ins:219 ins:114 ins:15 ins:267 ins:284 ins:49 ins:216 ins:242 ins:27 ins:57 ins:275 ins:53 275 114
+int 16 3 ins:276 ins:278 ins:260 ins:273 ins:224 ins:74 ins:1 ins:4 ins:32 ins:126 ins:264 ins:28 ins:204 ins:242 ins:282 ins:24 282 276 278
+int 16 2 ins:61 ins:59 ins:216 ins:11 ins:71 ins:31 ins:261 ins:108 ins:246 ins:60 ins:70 ins:148 ins:28 ins:52 ins:99 ins:103 216 103
+int 16 2 ins:277 ins:224 ins:299 ins:144 ins:233 ins:234 ins:86 ins:27 ins:157 ins:175 ins:150 ins:81 ins:147 ins:284 ins:95 ins:171 175 277
+int 16 3 ins:147 ins:76 ins:164 ins:272 ins:105 ins:156 ins:222 ins:190 ins:88 ins:91 ins:43 ins:47 ins:97 ins:225 ins:191 ins:245 156 147 225
+int 17 3 ins:188 ins:299 ins:210 ins:287 ins:172 ins:270 ins:14 ins:109 ins:285 ins:74 ins:22 ins:166 ins:265 ins:54 ins:124 ins:29 ins:31 265 31 299
+int 17 3 ins:50 ins:96 ins:232 ins:95 ins:41 ins:262 ins:52 ins:141 ins:51 ins:80 ins:21 ins:148 ins:188 ins:169 ins:240 ins:45 ins:29 21 240 29
+int 17 2 ins:123 ins:169 ins:91 ins:277 ins:154 ins:275 ins:173 ins:253 ins:87 ins:155 ins:157 ins:176 ins:72 ins:172 ins:197 ins:107 ins:230 176 72
+int 17 2 ins:209 ins:235 ins:271 ins:177 ins:62 ins:269 ins:75 ins:15 ins:63 ins:30 ins:23 ins:143 ins:95 ins:242 ins:234 ins:281 ins:79 15 177
+int 17 2 ins:261 ins:279 ins:84 ins:235 ins:31 ins:231 ins:119 ins:52 ins:21 ins:150 ins:256 ins:266 ins:82 ins:158 ins:277 ins:167 ins:221 256 231
+int 17 3 ins:108 ins:76 ins:188 ins:22 ins:192 ins:35 ins:263 ins:67 ins:277 ins:267 ins:123 ins:37 ins:8 ins:99 ins:184 ins:200 ins:105 188 22 192
+int 17 3 ins:271 ins:297 ins:27 ins:286 ins:166 ins:77 ins:192 ins:285 ins:81 ins:65 ins:149 ins:251 ins:210 ins:134 ins:254 ins:26 ins:4 286 251 65
+int 18 2 ins:27 ins:150 ins:108 ins:291 ins:22 ins:25 ins:262 ins:283 ins:154 ins:122 ins:171 ins:191 ins:24 ins:198 ins:46 ins:125 ins:116 ins:33 108 154
+int 18 3 ins:168 ins:221 ins:178 ins:150 ins:141 ins:146 ins:149 ins:4 ins:234 ins:152 ins:269 ins:187 ins:232 ins:159 ins:39 ins:199 ins:206 ins:53 178 269 152
+int 18 3 ins:222 ins:169 ins:58 ins:47 ins:274 ins:74 ins:37 ins:217 ins:18 ins:193 ins:260 ins:56 ins:299 ins:110 ins:49 ins:33 ins:227 ins:97 97 58 222
+int 19 3 ins:120 ins:185 ins:195 ins:102 ins:175 ins:258 ins:23 ins:35 ins:106 ins:31 ins:177 ins:54 ins:84 ins:78 ins:76 ins:272 ins:163 ins:169 ins:140 84 163 76
+int 19 3 ins:77 ins:248 ins:1 ins:25 ins:23 ins:242 ins:28 ins:284 ins:84 ins:153 ins:97 ins:38 ins:26 ins:261 ins:273 ins:246 ins:157 ins:119 ins:263 28 25 273
+int 19 2 ins:37 ins:186 ins:286 ins:16 ins:266 ins:242 ins:79 ins:156 ins:8 ins:137 ins:171 ins:188 ins:27 ins:241 ins:22 ins:122 ins:48 ins:143 ins:107 48 241
+int 19 2 ins:269 ins:240 ins:215 ins:35 ins:167 ins:158 ins:89 ins:65 ins:63 ins:81 ins:140 ins:265 ins:99 ins:12 ins:108 ins:275 ins:92 ins:187 ins:102 92 81
+int 20 3 ins:298 ins:49 ins:166 ins:297 ins:46 ins:90 ins:225 ins:82 ins:189 ins:149 ins:126 ins:133 ins:20 ins:171 ins:281 ins:285 ins:25 ins:111 ins:91 ins:144 20 133 82
+double 20 2 ins:24.2 ins:18.1 ins:2.4 ins:28.6 ins:18 ins:29.6 ins:23.5 ins:16.3 ins:20.3 ins:9.3 ins:23.2 ins:29.5 ins:15.8 ins:25.6 ins:21.6 ins:11 ins:8.3 ins:24.3 ins:21 ins:17.7 25.6 23.2
+int 20 3 ins:70 ins:29 ins:287 ins:251 ins:298 ins:85 ins:1 ins:245 ins:60 ins:246 ins:284 ins:140 ins:268 ins:153 ins:54 ins:274 ins:266 ins:87 ins:135 ins:218 29 218 153
+double 20 3 ins:21 ins:10 ins:1.9 ins:2.9 ins:16.7 ins:17.5 ins:19.8 ins:18.5 ins:14.3 ins:10.9 ins:15.6 ins:5.2 ins:11.2 ins:19.3 ins:12.3 ins:26.5 ins:28.3 ins:19.1 ins:7.9 ins:14.4 21 5.2 11.2
+double 20 2 ins:12.4 ins:0.7 ins:6.6 ins:4 ins:24.3 ins:20.1 ins:10.9 ins:1.6 ins:20.4 ins:9.8 ins:27.7 ins:22.6 ins:5.4 ins:28.1 ins:25.2 ins:4.9 ins:13.2 ins:15.2 ins:18.1 ins:8.7 13.2 28.1
+double 21 4 ins:8 ins:27.8 ins:9.7 ins:22.2 ins:6 ins:23.9 ins:22.6 ins:8.8 ins:23.6 ins:4 ins:15.7 ins:6.8 ins:26.3 ins:17.4 ins:18.2 ins:18.3 ins:15.9 ins:26.4 ins:14.9 ins:13.1 ins:29 14.9 8 13.1 22.2
+int 21 4 ins:242 ins:137 ins:52 ins:105 ins:240 ins:50 ins:268 ins:173 ins:274 ins:228 ins:139 ins:18 ins:279 ins:118 ins:275 ins:127 ins:282 ins:208 ins:258 ins:166 ins:1 268 282 274 240
+double 21 2 ins:16.5 ins:21.7 ins:4.8 ins:5.7 ins:9.2 ins:5.2 ins:12.8 ins:14.8 ins:8.7 ins:19.4 ins:28.5 ins:19.3 ins:15.5 ins:7.7 ins:17.8 ins:26 ins:21.3 ins:10 ins:0.1 ins:20.8 ins:14.6 21.7 19.3
+double 21 4 ins:26.2 ins:25.8 ins:26 ins:8.4 ins:5.8 ins:0 ins:29.8 ins:19.4 ins:3.1 ins:28.8 ins:22.2 ins:19.1 ins:26.1 ins:24.2 ins:9.1 ins:17.1 ins:20.9 ins:23.6 ins:29.2 ins:15.6 ins:29.6 28.8 9.1 19.1 26.2
+double 21 3 ins:2 ins:7 ins:2.3 ins:17.7 ins:26.8 ins:9.5 ins:24.4 ins:18.7 ins:26 ins:25 ins:26.3 ins:12.9 ins:22 ins:0.6 ins:27.2 ins:16.5 ins:10.8 ins:1.5 ins:19.3 ins:25.9 ins:2.4 7 26 25.9
+int 21 2 ins:164 ins:42 ins:159 ins:173 ins:108 ins:43 ins:212 ins:287 ins:211 ins:192 ins:49 ins:222 ins:8 ins:238 ins:146 ins:142 ins:138 ins:224 ins:87 ins:69 ins:241 142 69
+int 22 2 ins:293 ins:49 ins:1 ins:184 ins:266 ins:122 ins:278 ins:113 ins:208 ins:0 ins:81 ins:292 ins:273 ins:29 ins:97 ins:220 ins:207 ins:241 ins:279 ins:92 ins:64 ins:116 278 207
+int 22 4 ins:165 ins:11 ins:13 ins:218 ins:137 ins:87 ins:215 ins:30 ins:219 ins:151 ins:267 ins:212 ins:164 ins:168 ins:110 ins:31 ins:175 ins:132 ins:10 ins:47 ins:113 ins:133 215 137 87 133
+double 23 2 ins:23.7 ins:8.7 ins:9.3 ins:0.4 ins:13.1 ins:4.1 ins:16.9 ins:28.4 ins:1.5 ins:15.8 ins:2.2 ins:1.6 ins:12.8 ins:20.5 ins:18.2 ins:10.5 ins:21.8 ins:3.4 ins:16.4 ins:28.1 ins:18 ins:6.8 ins:22.4 0.4 1.5
+double 23 3 ins:25.1 ins:2.2 ins:22.5 ins:22.8 ins:9.8 ins:20.1 ins:23.7 ins:15.3 ins:1.3 ins:24.5 ins:0.3 ins:27.2 ins:23.6 ins:1.6 ins:9.3 ins:29.6 ins:21.8 ins:25.9 ins:0.1 ins:15.2 ins:3.1 ins:27 ins:1.9 15.2 2.2 1.3
+int 24 4 ins:36 ins:113 ins:80 ins:95 ins:289 ins:283 ins:195 ins:221 ins:260 ins:160 ins:110 ins:224 ins:206 ins:30 ins:106 ins:68 ins:19 ins:262 ins:240 ins:59 ins:137 ins:258 ins:64 ins:225 106 206 225 36
+int 24 4 ins:113 ins:241 ins:19 ins:23 ins:7 ins:255 ins:192 ins:252 ins:146 ins:155 ins:38 ins:21 ins:130 ins:276 ins:193 ins:178 ins:174 ins:197 ins:17 ins:9 ins:236 ins:133 ins:136 ins:267 255 276 178 193
+int 25 3 ins:139 ins:115 ins:198 ins:170 ins:17 ins:207 ins:39 ins:49 ins:126 ins:147 ins:127 ins:79 ins:277 ins:273 ins:190 ins:285 ins:54 ins:22 ins:16 ins:167 ins:289 ins:294 ins:291 ins:210 ins:45 167 277 139
+double 26 2 ins:23.5 ins:17.5 ins:21.8 ins:27.4 ins:0.8 ins:18.4 ins:27.7 ins:6.2 ins:4.4 ins:7.2 ins:24 ins:19.8 ins:26.4 ins:8.2 ins:14.2 ins:18.1 ins:6.6 ins:11.5 ins:3.8 ins:9.1 ins:17.7 ins:18.3 ins:6.5 ins:23.2 ins:8.6 ins:27.9 11.5 6.5
+double 26 3 ins:15.7 ins:29.2 ins:0.3 ins:14.7 ins:9 ins:28.9 ins:0.9 ins:7.9 ins:4.5 ins:24.8 ins:1.6 ins:27.3 ins:27.1 ins:2.4 ins:1 ins:15.4 ins:23 ins:19.7 ins:17.9 ins:8.2 ins:26.9 ins:7.7 ins:13.4 ins:27.9 ins:13.5 ins:5.7 7.9 4.5 14.7
+int 26 4 ins:59 ins:176 ins:117 ins:263 ins:129 ins:87 ins:203 ins:265 ins:130 ins:127 ins:207 ins:147 ins:12 ins:91 ins:175 ins:167 ins:26 ins:232 ins:56 ins:3 ins:121 ins:295 ins:190 ins:139 ins:294 ins:19 294 19 190 175
+int 26 3 ins:173 ins:136 ins:169 ins:63 ins:249 ins:80 ins:266 ins:287 ins:32 ins:124 ins:128 ins:289 ins:91 ins:248 ins:24 ins:68 ins:22 ins:102 ins:181 ins:186 ins:280 ins:235 ins:37 ins:164 ins:258 ins:199 80 63 235
+int 26 3 ins:106 ins:29 ins:275 ins:40 ins:100 canc:100 ins:232 ins:274 ins:268 ins:55 ins:131 canc:274 canc:275 ins:219 canc:268 ins:53 canc:106 canc:232 ins:111 ins:64 ins:266 ins:229 canc:131 ins:123 ins:144 ins:212 212 40 219
+int 26 4 ins:87 ins:164 ins:236 ins:41 ins:253 canc:41 ins:88 ins:170 canc:87 ins:225 canc:236 canc:88 canc:164 ins:279 ins:62 canc:253 ins:67 canc:62 canc:170 ins:211 ins:153 ins:264 ins:229 ins:83 ins:163 canc:264 225 67 211 163
+double 27 4 ins:14.1 canc:14.1 ins:8.2 ins:25.9 ins:14.7 ins:8.4 ins:17.2 ins:7.6 ins:22.7 ins:27.1 ins:11.1 ins:22 ins:15.9 ins:29.2 ins:11.8 ins:2.4 ins:26.1 canc:14.7 canc:2.4 ins:19.5 canc:19.5 ins:23.5 ins:4 canc:26.1 ins:9.2 ins:7 ins:16 11.8 8.2 15.9 4
+int 27 3 ins:68 canc:68 ins:73 ins:26 ins:189 ins:216 canc:216 ins:168 ins:158 ins:92 ins:260 ins:178 ins:269 ins:291 ins:3 ins:255 ins:197 canc:26 ins:213 ins:215 canc:168 ins:111 ins:10 ins:174 canc:197 canc:158 canc:269 215 291 260
+double 27 2 ins:14.5 ins:1.7 ins:4.5 ins:12.4 ins:27.5 ins:9.5 canc:9.5 ins:28.3 ins:18.4 canc:14.5 ins:8.8 ins:6.8 canc:18.4 ins:16.1 canc:12.4 canc:27.5 ins:22.7 ins:11.5 canc:6.8 ins:21.4 ins:16.3 canc:8.8 canc:28.3 canc:22.7 ins:7.5 ins:9.2 ins:11.4 7.5 11.5
+double 28 2 ins:22.3 ins:2.7 ins:24 canc:24 ins:3.7 canc:2.7 ins:2.4 canc:3.7 ins:21 ins:21.6 ins:20.4 ins:27.3 ins:21.8 ins:20.3 canc:27.3 canc:21.6 ins:25.8 ins:11.2 ins:26.8 ins:12.4 ins:28.6 ins:0.8 ins:27.4 canc:28.6 ins:12.6 ins:22 canc:21 ins:12 11.2 26.8
+int 28 4 ins:7 ins:106 canc:7 ins:126 canc:126 canc:106 ins:182 ins:183 ins:278 ins:142 ins:75 ins:194 ins:296 canc:194 ins:189 ins:98 ins:155 ins:276 ins:130 ins:217 ins:297 ins:174 ins:244 canc:244 ins:245 ins:11 ins:192 ins:99 75 155 11 142
+int 28 4 ins:60 ins:20 ins:156 canc:60 canc:156 canc:20 ins:52 canc:52 ins:87 ins:234 ins:159 ins:292 ins:75 ins:67 ins:246 ins:163 ins:112 ins:136 ins:150 ins:30 ins:55 canc:159 ins:171 canc:246 ins:215 ins:165 ins:236 ins:259 234 87 136 112
+int 28 5 ins:157 ins:6 canc:6 ins:126 ins:130 ins:99 ins:173 ins:258 ins:211 ins:58 ins:276 canc:126 canc:130 ins:256 ins:140 ins:268 canc:256 canc:258 ins:249 canc:173 ins:262 ins:21 ins:76 ins:182 ins:194 ins:74 ins:41 ins:52 52 249 262 268 76
+int 29 3 ins:231 ins:244 ins:12 ins:147 ins:49 ins:293 canc:49 ins:52 canc:231 ins:221 ins:243 canc:147 ins:193 ins:17 ins:185 canc:185 ins:18 ins:41 ins:51 ins:256 canc:52 canc:221 ins:56 ins:261 ins:115 ins:74 ins:191 ins:88 ins:76 74 88 115
+int 29 4 ins:270 canc:270 ins:181 ins:226 ins:23 ins:250 ins:236 ins:273 canc:236 canc:273 ins:295 ins:183 ins:124 ins:5 ins:175 ins:85 canc:124 ins:273 ins:236 canc:295 ins:245 ins:80 ins:244 ins:269 ins:96 ins:204 ins:294 canc:96 ins:26 204 273 269 236
+int 30 3 ins:260 ins:127 canc:127 ins:107 ins:264 ins:123 ins:228 ins:263 ins:208 ins:118 ins:99 canc:107 canc:228 ins:234 canc:260 ins:270 canc:123 canc:208 ins:16 ins:61 ins:36 ins:71 ins:17 ins:254 ins:272 ins:109 ins:138 ins:9 ins:229 canc:229 17 272 109
+double 30 3 ins:22.7 ins:20.5 ins:17.6 ins:3.6 ins:24.7 ins:13.2 ins:10.6 ins:6.5 ins:7.9 ins:2.5 ins:22.2 ins:2.4 canc:22.7 ins:7.8 ins:21.1 ins:25.3 canc:7.9 ins:28.8 canc:7.8 ins:21.2 canc:2.4 ins:8.8 ins:13.4 ins:22.4 canc:22.2 ins:27.6 ins:21.4 ins:22 ins:17.5 ins:16.5 22 3.6 25.3
+double 30 3 ins:4.8 ins:23.3 canc:23.3 ins:12.2 canc:4.8 ins:26.7 ins:22.7 ins:17.5 ins:16.7 ins:5.9 ins:8.2 ins:24.8 ins:11.9 ins:0.5 canc:12.2 ins:27.8 canc:26.7 canc:17.5 canc:24.8 ins:18.8 ins:4.2 ins:14.6 canc:0.5 ins:18.1 ins:10.1 ins:1.6 ins:11.4 ins:17.5 canc:18.1 ins:14.5 27.8 11.9 8.2
+double 31 5 ins:23.6 ins:22.1 canc:23.6 ins:27.4 ins:10.7 canc:10.7 canc:27.4 canc:22.1 ins:28.5 ins:17.5 ins:14.3 ins:15.3 ins:25.5 canc:28.5 canc:15.3 ins:25.2 ins:13.4 ins:9.8 canc:14.3 ins:15 ins:5.5 ins:22.7 canc:5.5 canc:22.7 canc:9.8 ins:14.4 ins:13.2 ins:8.3 ins:14.2 ins:16.4 ins:2 13.4 17.5 25.5 16.4 8.3
+int 31 5 ins:245 ins:189 ins:117 ins:12 canc:117 canc:12 ins:56 canc:56 ins:83 canc:245 ins:232 ins:55 ins:249 canc:232 ins:76 canc:249 ins:125 ins:58 ins:35 ins:117 ins:241 ins:40 ins:57 canc:76 canc:83 ins:84 ins:164 canc:164 ins:18 ins:177 ins:222 55 18 117 40 84
+int 32 4 ins:92 ins:235 ins:50 ins:14 ins:230 canc:92 canc:230 canc:50 canc:14 ins:52 ins:231 ins:110 ins:176 ins:49 canc:176 ins:190 canc:190 ins:178 ins:161 canc:110 ins:175 ins:287 ins:142 ins:38 ins:270 ins:25 ins:228 ins:255 canc:25 ins:265 canc:142 canc:235 49 231 38 161
+double 32 4 ins:18.3 ins:8.5 ins:5.9 ins:1.4 ins:6.9 canc:18.3 ins:28.7 ins:24.5 ins:5.3 ins:25.9 ins:0.4 ins:1.2 canc:5.9 ins:10.5 ins:25 ins:16.5 ins:17.5 ins:0.5 ins:12.7 ins:27 ins:2.5 ins:12.1 ins:22.2 canc:24.5 ins:28.2 ins:21.3 ins:16.1 ins:17.3 ins:26.8 ins:15.9 ins:1 ins:27.4 27 28.7 0.4 15.9
+double 32 2 ins:18.8 ins:11.1 ins:13.2 canc:18.8 ins:2.8 canc:2.8 ins:16.1 ins:19.1 canc:16.1 ins:1.6 ins:25.7 ins:10.9 ins:22.2 canc:25.7 ins:10.2 ins:8.5 canc:1.6 canc:10.9 ins:7.8 ins:4.9 ins:1.6 canc:4.9 ins:27.4 ins:28.5 canc:1.6 ins:16.1 ins:13.9 canc:8.5 ins:7.4 canc:22.2 ins:18.8 ins:24.3 7.4 11.1
+double 33 5 ins:15.2 ins:29.9 canc:15.2 ins:3.4 ins:11.7 ins:18 canc:11.7 canc:29.9 ins:16.3 ins:9.3 ins:26.5 canc:26.5 canc:16.3 ins:21.5 ins:3.8 ins:16.2 ins:19.8 canc:19.8 ins:3 ins:5.6 ins:12.3 ins:17.1 ins:5 ins:23.6 canc:9.3 ins:1.4 canc:1.4 ins:17.6 canc:23.6 ins:21 ins:19.1 canc:21.5 ins:26.4 3 5 17.1 18 5.6
+int 33 5 ins:109 ins:48 canc:109 ins:74 ins:195 ins:13 ins:165 ins:217 ins:254 ins:276 canc:165 ins:136 ins:132 ins:78 ins:10 canc:136 canc:10 ins:95 ins:149 ins:210 canc:195 ins:176 ins:271 ins:14 ins:207 ins:158 ins:270 canc:276 ins:248 ins:164 ins:64 ins:32 canc:64 254 176 14 217 271
+double 34 3 ins:7.1 canc:7.1 ins:8.8 canc:8.8 ins:15.2 ins:0.7 ins:12.6 ins:12.3 ins:22.5 ins:0.8 ins:20.2 ins:5.4 ins:8.8 ins:10 ins:13.2 canc:0.7 ins:19.2 ins:1.3 ins:22.3 ins:29.7 canc:12.3 ins:29.3 canc:22.5 canc:5.4 ins:5.9 ins:2 ins:12.7 ins:14.7 canc:14.7 ins:26 ins:25.8 ins:9.3 ins:1.7 ins:29.5 29.5 9.3 2
+double 34 5 ins:1.8 ins:0.4 ins:15.2 canc:0.4 ins:22.3 ins:9.1 ins:10.8 ins:4.8 ins:14.4 ins:14.9 ins:7.4 ins:23.6 ins:22 canc:4.8 ins:15.9 ins:28 ins:1.3 ins:29.7 canc:7.4 canc:28 ins:22.9 canc:29.7 canc:14.4 ins:16 ins:28.4 ins:21.2 ins:18.6 ins:3.6 ins:2.1 canc:22.9 ins:12.8 ins:28.9 ins:24.2 ins:16.3 2.1 21.2 22.3 28.9 15.2
+double 34 2 ins:1.4 ins:5.2 canc:1.4 canc:5.2 ins:10.9 ins:19.2 canc:19.2 ins:20.4 ins:12.6 canc:12.6 ins:28.4 ins:27 canc:27 ins:19.9 ins:18.7 ins:1.7 ins:0 ins:10.3 ins:27.7 canc:20.4 canc:27.7 canc:0 ins:10.1 ins:21.2 ins:20.8 ins:0.4 ins:24 ins:18.5 ins:21.3 ins:3.4 ins:18.2 canc:10.1 ins:12.8 ins:3.3 18.7 20.8
+double 35 5 ins:11.9 canc:11.9 ins:13 canc:13 ins:0 canc:0 ins:24.5 ins:11.2 canc:24.5 ins:8.3 ins:3.8 ins:20.5 ins:5.5 ins:17.4 ins:2.2 ins:27.4 ins:5.2 canc:3.8 canc:27.4 canc:8.3 ins:18.8 ins:9.8 ins:4.1 canc:11.2 ins:25.8 canc:20.5 canc:5.2 ins:19.4 ins:16.7 ins:28.4 ins:10.3 ins:28.5 ins:17.3 ins:15.8 ins:29.7 18.8 25.8 4.1 5.5 16.7
+int 35 3 ins:111 ins:174 canc:174 ins:37 ins:135 ins:81 ins:237 ins:34 canc:135 ins:89 ins:112 ins:246 ins:268 ins:45 ins:64 ins:269 ins:124 ins:239 ins:171 ins:210 ins:183 ins:166 ins:99 ins:181 ins:67 ins:143 canc:183 ins:261 canc:111 ins:85 ins:4 ins:227 ins:120 ins:223 canc:85 99 246 120
+int 35 3 ins:224 ins:133 ins:56 ins:284 ins:159 ins:259 ins:30 ins:55 canc:133 ins:88 ins:16 ins:267 ins:28 ins:74 ins:281 ins:82 canc:224 ins:52 ins:41 ins:297 ins:275 ins:134 ins:266 ins:15 canc:159 canc:281 ins:245 canc:15 canc:267 ins:25 ins:293 ins:281 canc:134 ins:134 ins:250 245 281 250
+int 35 3 ins:253 ins:2 canc:253 ins:271 ins:79 canc:271 ins:221 canc:79 ins:125 ins:130 ins:223 canc:2 ins:189 canc:189 ins:170 canc:170 ins:154 ins:95 ins:111 ins:18 ins:297 ins:148 ins:28 ins:231 ins:109 ins:203 canc:297 ins:209 canc:209 ins:289 ins:194 canc:223 ins:4 ins:234 ins:113 109 289 234
+int 35 3 ins:25 ins:155 ins:261 canc:261 canc:25 ins:229 ins:272 ins:193 ins:114 ins:89 ins:56 ins:268 canc:193 canc:272 ins:234 canc:114 canc:89 ins:42 ins:61 ins:250 canc:268 ins:255 canc:234 ins:188 canc:42 ins:240 ins:259 ins:266 ins:212 ins:196 ins:16 ins:157 ins:156 ins:178 ins:270 188 178 266
+double 36 2 ins:19.3 canc:19.3 ins:24.8 ins:7.8 ins:19.8 ins:21.5 ins:17 canc:24.8 ins:26.6 ins:27.9 ins:14.6 ins:12.5 canc:12.5 canc:27.9 ins:16 ins:2.5 ins:11.9 ins:16.7 ins:2.9 ins:8.9 canc:14.6 ins:22.2 ins:16.9 ins:19.9 ins:28.2 canc:19.8 ins:7.4 ins:19.3 canc:2.5 ins:4.2 ins:7.9 ins:10.9 ins:27.4 ins:22.1 ins:0.4 ins:7.6 26.6 7.8
+int 36 6 ins:125 ins:30 canc:30 ins:187 canc:125 ins:96 canc:187 canc:96 ins:23 ins:121 ins:241 ins:90 canc:90 ins:208 ins:211 ins:119 ins:10 canc:23 ins:285 ins:17 ins:164 canc:119 ins:295 ins:155 ins:25 ins:207 ins:122 ins:14 ins:180 ins:247 ins:163 ins:77 canc:211 ins:40 ins:86 ins:67 180 17 164 121 25 14
+int 37 4 ins:299 ins:81 ins:31 ins:0 ins:255 canc:81 canc:31 ins:253 canc:0 ins:250 ins:121 ins:245 ins:273 ins:116 ins:227 ins:159 ins:66 ins:88 ins:120 ins:86 ins:95 canc:250 canc:88 ins:222 ins:261 canc:86 canc:121 ins:157 ins:282 ins:89 canc:245 ins:36 ins:187 ins:161 ins:264 canc:255 ins:195 66 157 222 187
+int 38 4 ins:286 ins:192 canc:286 canc:192 ins:77 ins:154 ins:127 canc:154 canc:77 ins:30 canc:30 ins:120 ins:6 ins:134 ins:255 canc:134 canc:255 ins:38 ins:281 ins:27 ins:288 ins:261 canc:127 ins:82 canc:27 ins:213 canc:82 ins:293 ins:18 canc:293 ins:65 ins:177 ins:258 canc:18 ins:242 canc:242 canc:281 canc:213 65 120 288 261
+int 38 2 ins:61 ins:297 canc:297 canc:61 ins:219 ins:66 ins:275 ins:173 canc:66 ins:279 ins:215 canc:219 ins:172 canc:172 canc:173 canc:279 ins:74 canc:215 ins:244 ins:70 canc:244 ins:175 ins:85 ins:177 ins:133 canc:275 ins:285 ins:134 ins:291 canc:134 ins:180 ins:35 ins:72 ins:284 ins:255 ins:17 canc:70 canc:285 180 74
+double 38 2 ins:11.9 ins:11.4 canc:11.4 ins:6.7 canc:6.7 canc:11.9 ins:8.6 ins:5 ins:12.9 ins:10.8 ins:14.3 ins:20 canc:10.8 ins:27.5 ins:18.9 canc:14.3 canc:8.6 canc:12.9 ins:21 ins:9.7 ins:14.4 ins:14.3 ins:25.5 ins:12.2 canc:27.5 canc:25.5 ins:8.1 ins:29.9 ins:7.3 ins:21.4 canc:20 ins:23.7 ins:12.4 canc:12.4 ins:16.1 ins:19.7 canc:14.4 ins:21.8 18.9 21.4
+int 40 4 ins:197 ins:23 ins:280 ins:106 canc:280 ins:191 ins:216 ins:196 canc:196 ins:125 canc:197 canc:106 canc:216 canc:191 ins:14 ins:65 canc:23 ins:70 ins:86 ins:72 ins:113 ins:278 ins:60 ins:220 ins:184 ins:71 ins:170 canc:86 canc:170 ins:135 canc:125 canc:14 ins:103 ins:178 ins:81 ins:102 canc:70 ins:251 ins:117 ins:54 102 81 178 184
+double 41 5 ins:21.7 ins:23.1 ins:3.6 ins:15.8 canc:23.1 canc:3.6 ins:24.8 ins:28.5 canc:15.8 canc:21.7 ins:28.8 ins:6.9 ins:8.2 ins:11.9 ins:9.1 ins:10 ins:2.6 canc:28.8 ins:5.4 ins:26.2 ins:3.5 ins:23.5 ins:20 ins:24.5 ins:21 canc:28.5 ins:19.2 canc:5.4 ins:1.3 ins:6.5 ins:4.2 ins:19.3 ins:0.8 ins:22.2 canc:20 ins:8.1 canc:6.9 ins:24 ins:2.2 ins:27.5 canc:24.8 21 8.1 23.5 10 19.3
+int 41 2 ins:76 ins:147 ins:31 ins:129 ins:71 canc:76 ins:295 ins:259 canc:31 ins:130 ins:37 ins:293 ins:186 ins:192 ins:8 canc:37 ins:75 ins:25 ins:298 ins:184 ins:74 ins:162 canc:25 ins:80 ins:65 canc:129 ins:217 canc:80 canc:298 ins:28 ins:111 ins:215 ins:10 ins:226 ins:171 ins:154 ins:57 ins:198 ins:213 ins:144 ins:248 57 65
+int 41 6 ins:93 canc:93 ins:182 canc:182 ins:45 canc:45 ins:40 ins:170 ins:290 ins:179 ins:283 canc:170 canc:283 ins:15 canc:40 ins:23 ins:150 canc:15 ins:70 ins:56 ins:22 ins:175 canc:150 canc:22 ins:220 canc:220 ins:63 ins:95 ins:280 canc:179 ins:72 ins:247 ins:221 ins:264 ins:60 canc:95 ins:65 canc:175 ins:128 ins:234 ins:294 294 65 221 264 290 23
+double 41 5 ins:16.4 ins:2.8 canc:16.4 ins:17.4 ins:27.4 ins:6.3 ins:11.5 canc:11.5 ins:24 ins:20.1 ins:16.4 canc:2.8 ins:15.2 ins:8.2 ins:26 ins:16.6 ins:8.1 ins:23.1 ins:14.4 ins:15.1 ins:23.3 ins:7.9 ins:23.5 canc:23.5 ins:18.8 canc:6.3 canc:23.1 canc:7.9 ins:13.4 canc:15.2 ins:25.1 ins:18 ins:11.9 ins:26.4 canc:18.8 canc:16.6 ins:18.2 ins:5.7 ins:29.7 ins:7 canc:27.4 16.4 25.1 5.7 26 11.9
+int 42 5 ins:19 canc:19 ins:235 canc:235 ins:113 ins:182 ins:137 ins:252 ins:106 canc:252 canc:137 ins:162 ins:208 canc:208 canc:106 canc:113 ins:17 ins:90 canc:17 ins:258 ins:191 ins:18 ins:66 canc:258 ins:243 ins:58 ins:283 ins:250 ins:164 ins:204 canc:58 ins:291 ins:215 canc:204 ins:109 canc:291 ins:158 ins:0 ins:167 ins:37 ins:221 ins:161 66 167 215 37 243
+double 42 2 ins:16.1 canc:16.1 ins:9.2 canc:9.2 ins:24.4 ins:23.3 ins:29.9 ins:7.9 canc:24.4 ins:23.9 ins:26.2 canc:23.9 ins:22.1 ins:28.4 ins:18.5 canc:22.1 canc:28.4 canc:7.9 ins:27.5 ins:27.1 ins:23 canc:27.5 canc:29.9 canc:27.1 canc:23.3 ins:29.7 ins:14.4 ins:27.7 ins:11.8 canc:29.7 ins:11.5 ins:1.9 ins:26.8 ins:3 ins:9.8 ins:20.2 ins:1.5 ins:2.9 ins:8.4 ins:3.7 canc:23 ins:22.1 26.2 26.8
+double 42 7 ins:15.1 canc:15.1 ins:8.6 ins:2.6 ins:26.3 ins:14.5 ins:16 ins:16.3 ins:6.6 ins:11.4 ins:12.3 ins:10.1 ins:10 ins:0.1 canc:26.3 ins:25.5 ins:4 ins:20.8 canc:25.5 ins:21.7 ins:22.3 ins:22.2 ins:11 ins:26.5 canc:2.6 ins:12.9 ins:17.4 ins:25.8 canc:20.8 ins:0.4 canc:8.6 ins:4.4 ins:8.9 canc:12.3 ins:24.6 ins:18.7 ins:13.4 ins:13.1 ins:3.5 ins:7.3 canc:18.7 ins:27.1 0.4 13.4 3.5 10 7.3 12.9 26.5
+int 42 2 ins:150 ins:46 ins:62 ins:201 canc:46 ins:171 canc:201 canc:171 ins:296 ins:255 ins:98 canc:150 ins:141 canc:255 ins:265 ins:194 ins:198 ins:52 ins:280 canc:52 ins:190 canc:190 canc:280 ins:292 canc:265 ins:108 ins:200 canc:200 canc:98 ins:115 canc:108 ins:167 canc:292 ins:18 ins:129 ins:87 ins:78 ins:91 ins:10 ins:200 ins:207 ins:145 141 87
+int 43 5 ins:27 ins:36 ins:19 canc:36 ins:140 canc:19 canc:27 canc:140 ins:151 canc:151 ins:284 ins:168 ins:283 ins:92 ins:288 ins:82 ins:263 ins:56 ins:35 ins:41 ins:52 canc:283 ins:59 ins:106 ins:112 canc:263 ins:12 ins:105 ins:275 ins:157 ins:114 ins:25 canc:52 ins:173 canc:284 ins:45 ins:267 ins:292 canc:25 canc:59 ins:165 canc:92 canc:56 82 41 105 168 267
+int 43 4 ins:153 canc:153 ins:132 ins:193 ins:92 canc:193 ins:297 ins:262 ins:35 ins:285 canc:262 ins:293 ins:81 ins:157 ins:98 ins:59 ins:54 ins:32 ins:2 canc:81 ins:52 ins:41 ins:296 canc:35 ins:117 canc:285 ins:107 ins:199 ins:204 ins:103 canc:132 ins:212 canc:103 canc:32 ins:285 ins:231 ins:214 ins:140 canc:52 ins:51 canc:285 ins:213 ins:216 41 59 212 98

@@ -1,5 +1,5 @@
 #include <iostream>
-
+#define massimo(a,b) a>b ? b:a;
 using namespace std;
 
 template <class T> class Node{
@@ -79,7 +79,7 @@ private:
 
   Node<H>* _rmax(Node<H>* r){
     if(!r || !r->getRight()) return r;
-    return _rmin(r->getRight());
+    return _rmax(r->getRight());
   }
 
   Node<H>* _successore(Node<H>* y){
@@ -110,6 +110,66 @@ private:
       if(y) return y;
       return NULL;
     }
+  }
+
+  Node<H>* _canc(Node<H>* y, H x){
+    Node<H>* tmp = _rsearch(y, x);
+    if(tmp){
+      if(tmp->getLeft() && tmp->getRight()){
+        //caso 3
+        Node<H>* s = _successore(tmp);
+        tmp->setKey(s->getKey());
+        _canc(s, *s->getKey());
+      }
+      else{
+        Node<H>* child = tmp->getLeft();
+        if(!child)  child = tmp->getRight();
+        Node<H>* p = tmp->getParent();
+        if(p){
+          if(x<*(p->getKey()))  p->setLeft(child);
+          else p->setRight(child);
+        }
+        else  root = child;
+        if(child) child->setParent(p);
+      }
+    }
+  }
+
+  int _altezza(Node<H>* y){
+    if(!y)  return -1;
+    int max = _altezza(y->getLeft());
+    int r = _altezza(y->getRight());
+    if(max < r) max = r;
+    return max+1;
+    //return massimo(_altezza(y->getLeft()), _altezza(y->getRight()))+1;
+  }
+
+  int _prof(Node<H>* y, H x){
+    if(!y)  return -1;
+    if(*y->getKey() == x) return 0;
+    int r;
+    if(x < *y->getKey()) r = _prof(y->getLeft(), x);
+    else r = _prof(y->getRight(), x);
+    if(r > -1) return r+1;
+    return -1;
+  }
+
+  int _rrank(Node<H>* y, H x){
+    if(!y)  return 0;
+    if(*y->getKey() < x)
+      return (_rrank(y->getLeft(), x) + _rrank(y->getRight(), x));
+    else
+      return (_rrank(y->getLeft(), x));
+  }
+
+  int _peso(Node<H>* y){
+    if(!y)  return 0;
+    return ((_peso(y->getLeft()) + (_peso(y->getRight()) +1 )));
+  }
+
+  int _foglie(Node<H>* y){
+    if(!y)  return 0;
+    if(y->getLeft() || y->getRight()) return (_foglie(y->getLeft()) + (_foglie(y->getRight())));
   }
 
 public:
@@ -186,6 +246,50 @@ public:
     current = _successore(current);
     return tmp;
   }
+
+  int altezza(){
+    return _altezza(root);
+  }
+
+  int altezza(H x){
+    Node<H>* tmp = _rsearch(x, root);
+    return _altezza(tmp);
+  }
+
+  int prof(H x){
+    return _prof(root, x);
+  }
+
+  int rank(H x){
+    Node<H>* tmp = _rsearch(x, root);
+    int i = -1;
+    if(tmp){
+      i++;
+      tmp = _predecessore(tmp);
+      while(tmp){
+        tmp = _predecessore(tmp);
+        i++;
+      }
+    }
+    return i;
+  }
+
+  int rrank(H x){
+    return _rrank(root ,x);
+  }
+
+  int peso(){
+    return _peso(root);
+  }
+
+  int peso(H x){
+    Node<H>* tmp = _rsearch(x, root);
+    return _peso(tmp);
+  }
+
+  int foglie(){
+    return  _foglie(root);
+  }
 };
 
 int main(){
@@ -208,6 +312,5 @@ int main(){
   cout << *(t->successore(7)) << endl;
   cout << *(t->predecessore(7)) << endl;
 
-  t->reset();
-  while(t->hasNext()) cout << *(t->next()) << " ";
+  cout << t->foglie();
 }

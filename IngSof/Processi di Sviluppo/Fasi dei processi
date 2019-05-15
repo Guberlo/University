@@ -1,0 +1,55 @@
+I processi di sviluppo descrivono le attività necessarie (e il modo in cui vengono alternate)
+durante lo sviluppo di un software. QUalunque processo descrive delle attività di Analisi dei requisiti,
+progettazione, implementazione, test e manutenzione
+
+Analisi dei requisiti:
+  Porta a definire le specifiche, stabilisce i servizi e i vincoli del software.
+  Requisito: ciascina delle caratteristiche che il software deve avere
+  Specifica: descrizione rigorosa delle caratteristiche del software
+
+  Raccolgo dei requisiti ed effettuo uno studio di fattibilità
+  (l'azienda riesce a svilupparlo conoscendo quei pochi requisiti? Il costo necessario verrà ripagato
+  da quanto il cliente è disposto a pagare?)
+
+  Se entrambi i punti sono soddisfatti allora passo ad abbozzare i requisiti.
+  Dopo averlii abbozzati vado a riscriverli in modo più dettagliato componendo la specifica.
+  Infine passo alla fase di convalida andando a confrontare la specifica e l'analisi. La convalida
+  viene effettuata anche dal cliente, quindi una copia della specifica viene inviata al cliente. (SRS Software Requirement System)
+
+  Esistono due tipi di requisiti:
+    Requisiti funzionali: cosa deve fare il sistema(ovvero le funzionalità)
+    Non funzionali: come il sistema lo fa, ad esempio un sistema di sicurezza (come dovrà proteggere i dati (con crittografia ecc))
+    o ad esempio un requisito di efficienza (quanta memoria deve utilizzare) per questi ultimi devo associare un'unità di misura,
+    altrimenti non posos verificare questo requisito. Es non deve utilizzare più di 1mb di memoria
+
+Fase di progettazione:
+  Suddividere i requisiti in più parti
+  Identificazione dei sottosistemi, ovvero progettare l'architettura software.
+  Potrei prima fare una progettazione più grossolana e dopo aver compreso davvero il sottosistema
+  faccio una progettazione più dettagliata. Documento la progettazione tramite i diagrammi uml(attività, classi, sequenza, stati)
+
+Fase di implementazione:
+  Implementare del codice in un certo linguaggio soddisfando la progettazione che ho fatto precedentemente.
+  Prima parte scrivo l'algoritmo che corrisponde alla progettazione. Seconda parte elimino gli errori che
+  questo algoritmo mi ha portato.
+
+Fase di convalida:
+  Si apre il documento dei requisiti e si verifica che l'implementazione del codice rispetti i requisiti
+  Viene condotta tramite processi di revisione e test del sistema. (L'ispezione viene fatta da persone molto
+  esperta, questa persona quindi costerà sicuramente di più di chi ha scritto il codice)
+
+  Se i sistemi sono altamente critici viene fatta sia ispezione che testing.
+
+Fase di test:
+  Si divide in più parti:
+  Test di componenti o unità (unit test): si testano i singoli componenti indipendentemente (funzioni, oggetti o raggruppamenti)
+  Test di sistema: Tutto il sistema è testato dando speciale importanza alle proprietà emergenti
+  Test di accettazione(alpha test): condotti dagli sviluppatori con dati forniti dal cliente per verificare che rispetti le esigenze
+  Beta test: si implementano tutte le feature ma non nella loro versione finale, fornendo il sistema ad alcuni clienti in modo tale da
+  scovare problemi o bug.
+  La gold version è la versione finale che viene distribuita a tutti.
+
+  Quando scrivo i requisiti sto implicitamente scrivendo un documento che mi permette di accettare il software.
+  Quando scrivo le specifiche del sistema sto scrivendo un documento che mi permette di accettare l'integrazione del sistema.
+  Dalle specifiche del sistema otteniamo il design del sistema da quale deriviamo il design dettagliato che ci permette di organizzare test
+  

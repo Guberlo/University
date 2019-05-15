@@ -1,0 +1,30 @@
+Il processo a cascata è stato definito nel 1970.
+Passo alla prossima fase quando ho compreso al 100% la fase corrente.
+Si inizia dalla definizione dei requisiti, dopo aver completato questa fase ho ottenuto un documento
+estremamente importante che non dovrò più toccare dopo aver finito questa fase fino alla fine dello sviluppo.
+
+Dopo la raccolta dei requisiti segue la fase di progettazione di tutti i requisiti.
+Questa fase mi porterà ad avere molti documenti relativi alla progettazione (diagrammi uml).
+Dopo aver stabilito le signature ecc passerò alla fase di implementazione andando ad effettuare gli unit test.
+
+Dopo aver finito l'implementazione passiamo all'integrazione e ai test di sistema.
+Dopo aver finito questa fase ed aver soddisfatto tutti i requisiti passo alla fase di manutenzione.
+
+Se avrò bisogno di aggiungere/modificare qualcosa posso tornare indietro andando a modificare tutto ma mantenendo
+sempre la stessa priorità di passare alla fase successiva solo quando ho completato la fase corrente.
+
+Sviluppo almeno dopo 1 anno.
+
+Vantaggi:
+Tutti i documenti sono consistenti tra di loro
+Ho avuto più tempo per ogni singola fase e di conseguenza il lavoro sarà svolto molto bene.
+Presenza di tanta documentazione che ci fa capire meglio cosa fare.
+Più facile verificare la correttezza del codice.
+
+Svantaggi:
+Non può essere utilizzato se abbiamo delle richieste di rilascio molto bene
+Se i requisiti cambiano nel tempo non va bene.
+
+E' adatto a sviluppare un software molto critico
+
+Ispirato ad altri processi fisici (ad esempio in aziende manufatturiere).
