@@ -157,19 +157,20 @@ private:
   int _rrank(Node<H>* y, H x){
     if(!y)  return 0;
     if(*y->getKey() < x)
-      return (_rrank(y->getLeft(), x) + _rrank(y->getRight(), x));
+      return (_rrank(y->getLeft(), x) + _rrank(y->getRight(), x) + 1);
     else
       return (_rrank(y->getLeft(), x));
   }
 
   int _peso(Node<H>* y){
     if(!y)  return 0;
-    return ((_peso(y->getLeft()) + (_peso(y->getRight()) +1 )));
+    return (_peso(y->getLeft()) + _peso(y->getRight()) +1 );
   }
 
   int _foglie(Node<H>* y){
     if(!y)  return 0;
-    if(y->getLeft() || y->getRight()) return (_foglie(y->getLeft()) + (_foglie(y->getRight())));
+    if(y->getLeft() || y->getRight()) return _foglie(y->getLeft()) + _foglie(y->getRight());
+    else return 1;
   }
 
 public:
