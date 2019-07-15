@@ -1,16 +1,15 @@
-#include<iostream>
+#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
 
-using namespace std;
 
-inline int massimo(int a, int b) {return a>b?a:b;}
+using namespace std;
 
 template <class H> class Node{
 private:
   H* key;
-  Node<H>* parent, *left, *right;
+  Node<H> *parent, *left, *right;
 
 public:
   Node(H key){
@@ -25,48 +24,49 @@ public:
 
   H getKey(){return *key;}
   Node<H>* getParent(){return parent;}
-  Node<H>* getLeft(){return left;}
   Node<H>* getRight(){return right;}
+  Node<H>* getLeft(){return left;}
 };
 
 template <class H> class BST{
 private:
   Node<H>* root;
+  H* ps;
 
-  Node<H>* _rsearch(Node<H>*r, H x){
-    if(!r)  return NULL;
-    if(r->getKey() == x)  return r;
-    if(x < r->getKey()) return _rsearch(r->getLeft(), x);
-    return _rsearch(r->getRight(), x);
+  Node<H>* _rsearch(Node<H>* y, H x){
+    if(!y)  return NULL;
+    if(y->getKey() == x) return y;
+    if(x < y->getKey()) return _rsearch(y->getLeft(), x);
+    return _rsearch(y->getRight(), x);
   }
 
-  Node<H>* _rmin(Node<H>* r){
-    if(!r || !r->getLeft()) return r;
-    return _rmin(r->getLeft());
+  Node<H>* _rmin(Node<H>* y){
+    if(!y || !y->getLeft()) return y;
+    return _rmin(y->getLeft());
   }
 
-  Node<H>* _successore(Node<H>* r){
-    if(!r)  return NULL;
-    H x = r->getKey();
-    if(r->getRight()){
-      r = _rmin(r->getRight());
-      return r;
+  Node<H>* _successore(Node<H>* y){
+    if(!y)  return NULL;
+    H x = y->getKey();
+    if(y->getRight()){
+      y = _rmin(y->getRight());
+      return y;
     }
     else{
-      do r = r->getParent();
-      while(r && r->getKey() < x);
-      if(r) return r;
+      do y = y->getParent();
+      while(y && y->getKey() < x);
+      if(y) return y;
       return NULL;
     }
   }
 
-  void _canc(Node<H>* r, H x){
-    Node<H>* tmp = _rsearch(r,x);
+  void _canc(Node<H>* y, H x){
+    Node<H>* tmp = _rsearch(y, x);
     if(!tmp)  return;
     Node<H>* p = tmp->getParent();
-    if(!tmp->getLeft() || !tmp->getRight()){
-      Node<H>* child = tmp->getLeft();
-      if(!child)  child = tmp->getRight();
+    if(!tmp->getRight() || !tmp->getLeft()){
+      Node<H>* child = tmp->getRight();
+      if(!child) child = tmp->getLeft();
       if(!p)  root = child;
       else{
         if(tmp == p->getLeft()) p->setLeft(child);
@@ -81,23 +81,17 @@ private:
     }
   }
 
-  int _altezza(Node<H>* y){
-    if(!y)  return -1;
-    int max = _altezza(y->getLeft());
-    int r = _altezza(y->getRight());
-    return massimo(max,r)+1;
-  }
+  H _peso(Node<H>* y){
+    if(!y)  return 0;
 
-  void _inorder(Node<H>* y){
-    if(y){
-      _inorder(y->getLeft());
-      cout << y->getKey() << " ";
-      _inorder(y->getRight());
-    }
+    _peso(y->getLeft());
+    *ps += y->getKey();
+    _peso(y->getRight());
+    return *ps;
   }
 
 public:
-  BST():root(NULL){};
+  BST() : root(NULL){ps = new H(0);}
 
   BST<H>* insert(H x){
     Node<H>* tmp = root;
@@ -122,29 +116,29 @@ public:
     _canc(root, x);
   }
 
-  int altezza(){
-    return _altezza(root)+1;
-  }
-
-  void inorder(){
-    _inorder(root);
+  H peso(H x){
+    Node<H>* tmp = _rsearch(root, x);
+    return _peso(tmp);
   }
 };
 
+
 int main(){
-  ifstream in ("input.txt");
+  ifstream in("input.txt");
   ofstream out("output.txt");
 
   while(!in.eof()){
     string type;
     in >> type;
-    int n;
-    in >> n;
+
+    int nop;
+    in >> nop;
 
     if(type == "int"){
-      BST<int> *b = new BST<int>();
+      BST<int>* b = new BST<int>();
       int val;
-      for(int i=0; i<n; i++){
+
+      for(int i=0; i<nop; i++){
         string s;
         in >> s;
 
@@ -160,12 +154,14 @@ int main(){
           b->canc(val);
         }
       }
-      out << b->altezza() << endl;
+      in >> val;
+      out << b->peso(val) << endl;
     }//end int
     if(type == "double"){
-      BST<double> *b = new BST<double>();
+      BST<double>* b = new BST<double>();
       double val;
-      for(int i=0; i<n; i++){
+
+      for(int i=0; i<nop; i++){
         string s;
         in >> s;
 
@@ -181,7 +177,9 @@ int main(){
           b->canc(val);
         }
       }
-      out << b->altezza() << endl;
-    }//end int
-  }
-}
+      in >> val;
+
+      out << b->peso(val) << endl;
+    }//end double
+  }//end while
+}//end main

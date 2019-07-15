@@ -1,16 +1,14 @@
-#include<iostream>
+#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
 
 using namespace std;
 
-inline int massimo(int a, int b) {return a>b?a:b;}
-
 template <class H> class Node{
 private:
   H* key;
-  Node<H>* parent, *left, *right;
+  Node<H> *parent, *left, *right;
 
 public:
   Node(H key){
@@ -33,35 +31,15 @@ template <class H> class BST{
 private:
   Node<H>* root;
 
-  Node<H>* _rsearch(Node<H>*r, H x){
-    if(!r)  return NULL;
-    if(r->getKey() == x)  return r;
-    if(x < r->getKey()) return _rsearch(r->getLeft(), x);
-    return _rsearch(r->getRight(), x);
+  Node<H>* _rsearch(H x, Node<H>* y){
+    if(!y)  return NULL;
+    if(y->getKey() == x)  return y;
+    if(x < y->getKey()) return _rsearch(x, y->getLeft());
+    return _rsearch(x, y->getRight());
   }
 
-  Node<H>* _rmin(Node<H>* r){
-    if(!r || !r->getLeft()) return r;
-    return _rmin(r->getLeft());
-  }
-
-  Node<H>* _successore(Node<H>* r){
-    if(!r)  return NULL;
-    H x = r->getKey();
-    if(r->getRight()){
-      r = _rmin(r->getRight());
-      return r;
-    }
-    else{
-      do r = r->getParent();
-      while(r && r->getKey() < x);
-      if(r) return r;
-      return NULL;
-    }
-  }
-
-  void _canc(Node<H>* r, H x){
-    Node<H>* tmp = _rsearch(r,x);
+  void _canc(H x, Node<H>* y){
+    Node<H>* tmp = _rsearch(x, y);
     if(!tmp)  return;
     Node<H>* p = tmp->getParent();
     if(!tmp->getLeft() || !tmp->getRight()){
@@ -77,27 +55,43 @@ private:
     else{
       Node<H>* s = _successore(tmp);
       tmp->setKey(s->getKey());
-      _canc(tmp->getRight(), s->getKey());
+      _canc(s->getKey(), tmp->getRight());
     }
   }
 
-  int _altezza(Node<H>* y){
-    if(!y)  return -1;
-    int max = _altezza(y->getLeft());
-    int r = _altezza(y->getRight());
-    return massimo(max,r)+1;
+  Node<H>* _successore(Node<H>* y){
+    if(!y)  return NULL;
+    H x = y->getKey();
+    if(y->getRight()){
+      y = _rmin(y->getRight());
+      return y;
+    }
+    else{
+      do y = y->getParent();
+      while(y && y->getKey() < x);
+      if(y) return y;
+      return NULL;
+    }
   }
 
-  void _inorder(Node<H>* y){
-    if(y){
-      _inorder(y->getLeft());
-      cout << y->getKey() << " ";
-      _inorder(y->getRight());
-    }
+  Node<H>* _rmin(Node<H>* y){
+    if(!y || !y->getLeft()) return y;
+    return _rmin(y->getLeft());
+  }
+
+  int _foglie(Node<H>* y){
+    if(!y)  return 0;
+    if(y->getLeft() || y->getRight()) return (_foglie(y->getLeft()) + _foglie(y->getRight()));
+    else return 1;
+  }
+
+  int _peso(Node<H>* y){
+    if(!y)  return 0;
+    return ((_peso(y->getLeft()) + (_peso(y->getRight()) +1 )));
   }
 
 public:
-  BST():root(NULL){};
+  BST() : root(NULL){};
 
   BST<H>* insert(H x){
     Node<H>* tmp = root;
@@ -119,69 +113,75 @@ public:
   }
 
   void canc(H x){
-    _canc(root, x);
+    _canc(x, root);
   }
 
-  int altezza(){
-    return _altezza(root)+1;
+  int foglie(){
+    return _foglie(root);
   }
 
-  void inorder(){
-    _inorder(root);
+  int peso(H x){
+    Node<H>* tmp = _rsearch(x, root);
+    return _peso(tmp);
   }
 };
 
 int main(){
-  ifstream in ("input.txt");
+  ifstream in("input.txt");
   ofstream out("output.txt");
 
   while(!in.eof()){
     string type;
     in >> type;
-    int n;
-    in >> n;
+
+    int nop;
+    in >> nop;
 
     if(type == "int"){
       BST<int> *b = new BST<int>();
       int val;
-      for(int i=0; i<n; i++){
-        string s;
-        in >> s;
 
-        if(s[0] == 'i'){
-          stringstream buffer(s.substr(4, s.size()));
+      for(int i=0; i<nop; i++){
+        string query;
+        in >> query;
+
+        if(query[0] == 'i'){
+          stringstream buffer(query.substr(4, query.size()));
           buffer >> val;
           b->insert(val);
         }
 
-        if(s[0] == 'c'){
-          stringstream buffer(s.substr(5, s.size()));
+        if(query[0] == 'c'){
+          stringstream buffer(query.substr(5, query.size()));
           buffer >> val;
           b->canc(val);
         }
       }
-      out << b->altezza() << endl;
-    }//end int
+      in >> val;
+      out << b->peso(val) << endl;
+    }
     if(type == "double"){
       BST<double> *b = new BST<double>();
       double val;
-      for(int i=0; i<n; i++){
-        string s;
-        in >> s;
 
-        if(s[0] == 'i'){
-          stringstream buffer(s.substr(4, s.size()));
+      for(int i=0; i<nop; i++){
+        string query;
+        in >> query;
+
+        if(query[0] == 'i'){
+          stringstream buffer(query.substr(4, query.size()));
           buffer >> val;
           b->insert(val);
         }
 
-        if(s[0] == 'c'){
-          stringstream buffer(s.substr(5, s.size()));
+        if(query[0] == 'c'){
+          stringstream buffer(query.substr(5, query.size()));
           buffer >> val;
           b->canc(val);
         }
       }
-      out << b->altezza() << endl;
-    }//end int
+      out << b->foglie() << endl;
+    }
+
   }
 }

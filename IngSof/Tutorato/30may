@@ -1,0 +1,48 @@
+ottenere la lista dei libri e mescolarla in ordine casuale
+
+List<Libro> list  = quety10() //restituisce una lista di un certo tipo
+
+Stream.generate(Math::random)
+      .map(d->(int) d * list.size())
+      .distinct()
+      .limit(list.size())
+      .map(c-> list.get(c))
+      .forEach(System.out::println)
+
+Data una lista di libri stampare il primo che ha un prezzo maggiore del precedente(metodo lamda)
+
+List<Libro> lista = Stream.generate(Libro::gen)
+                          .limit(10)
+                          .peek(System.out::println)
+                          .collect(Collectors.toList());
+
+IntStream.range(1, list.size())
+         .filter(i->list.get(i-1).getPrezzo() < list.get(i).getPrezzo())
+         .mapToObj(i-> list.get(i))
+         .peek(System.out::println)
+         .findAny();
+
+Data una lista di libri stampare il primo che ha un prezzo maggiore del precedente(metodo closure)
+
+List<Libro> lista = Stream.generate(Libro::gen)
+                          .limit(10)
+                          .peek(System.out::println)
+                          .collect(Collectors.toList());
+
+Libro prev = null;
+
+list.stream()
+    .filter(x->x.isBiggerThanPrev(x))
+    .peek(System.out::println)
+    .findAny();
+
+    private static Libro prev = null;
+    private static boolean isBiggerThanPrev(Libro x){
+    if(prev == null){
+      prev = x;
+      return false;
+      }
+      boolean ret = return prev.getPrezzo() < x.getPrezzo();
+      prev = x;
+      return ret;
+    }

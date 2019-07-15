@@ -1,0 +1,25 @@
+La BFS è un tipo di visita di un grafo, essa è una visita in ampiezza, ovvero visita prima i nodi "figli" (ovvero quelli
+a distanza minore) e poi i successivi.
+Si fissa un nodo come sorgente e si calcola la BFS su quel nodo. Se non esiste un cammino si dice che ha infiniti passi.
+
+Per implementarlo abbiamo bisogno di un Queue, un array per i colori(nodi visitati o meno), un array chiamato PiGrego(un
+array che rappresenta il predecessore di un nodo.)
+
+Un nodo è predeccessore di un altro se nel cammino minimo per andare da s a v passo prima da u. Se il cammino non esiste PiGreco[i]=NULL
+
+Abbiamo bisogno di un altro array d(array delle distanze di cammino minimo)
+
+Colori: bianco non so se esiste
+        grigio è stato scoperto ma non ho finito di visitarlo(non ho ancora completato di controllare i suoi adiacenti)
+        nero ho finito di lavorarci e non devo più passarci
+
+
+Prendo la sorgente e la inserisco nella coda, diventerà grigi (nella coda si trovano nodi grigi e si inseriscono solo bianchi)
+Inizio un ciclo che terminerà quando la coda è vuota. Ogni iterazione prendo un nodo della coda e si inseriscono tutti i suoi adiacenti,
+dopo di che diventa nero. L'array pigreco sarà riempito con il nodo sorgente che è il parent del nodo corrente.
+Nell'array delle distanze inserisco la distanza del nodo dalla sorgente e riapplico il ragionamento
+
+Inizializzazione: O(v)
+Iterazione sulla coda: visto che un nodo entra in coda al massimo una sola volta O(v + E)
+
+Totale: O(V + E) ovvero la somma dei nodi e degli archi

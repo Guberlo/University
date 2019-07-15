@@ -1,0 +1,57 @@
+Controllare appunti tutorato.
+
+è possibile applicare .distinct() ad uno stream. Questo elimina i duplicati.
+
+.findAny() applicata ad una filter restituisce la prima occorrenza che verifica il filter.
+
+
+.map() e .filter() sono stateless, non conservano uno stato interno.
+
+.reduce() e .max() accumulano un risultato, ha una dimensione limitata che non dipende
+dal numero di elementi nello stream
+
+sorted() e distinct() sono stateful, in quanto devono conoscere gli altri elementi dello stream.
+
+iterate(seme, f(seme)) si applica ad uno stream e restituisce un stream infinito e ordinato dato dall'applicazione
+di una funzione iterativa su un seme.
+è sequenziale in quanto per ottenere l'i-esimo elemento devo processare l'iesimo-1 elemento
+
+generate(f(x)) si applica ad uno stream e restituisce uno stream infinito tramite una funzione di tipo
+Supplier, che fornisce un valore. Supplier è un tipo che memorizza un'espressione lambda che può restituire qualcosa
+e non prende nulla in ingresso si scrive così: () -> f()
+
+IntStream è uno stream che può contenere solo numeri interi.
+Ha delle funzioni più adatte e specializzate per stream di Integer.
+
+possiamo utilizzare la funzione rangeClosed(x, y) che ci restituisce uno stream di interi
+che vanno da x a y.
+
+A posto di utilizzare la reduce come si fa sullo stream posso direttamente utilizzare il metodo sum().
+
+Possiamo passare da uno Stream ad un IntStream tramite la funzione mapToInt()
+
+Posso passare da un IntStream ad uno Stream<Integer> tramite la funzione boxed()
+
+Si abbia la lista che contiene istanze di Persona, si generi uno stream contenente i primi 4 elementi
+
+Lista <Persona> lista;
+
+IntStream.rangeClosed(0,3)
+         .mapToObj(i-> lista.get(i));
+
+forEach() può essere utilizzata solamente come istruzione finale in quanto questa consuma gli elementi dello stream
+
+
+Un'altra interfaccia funzionale è Function:
+  essa definisce un metodo chiamato apply() che prende in ingresso un oggetto di tipo T e ritorna un tipo generico R
+
+  esempio:
+  Function<String, Integer> stringLength = x-> x.length();
+  ....
+  .map(stringLength)
+  ....
+
+  Supplier è un'interfaccia funzionale che ha un singolo metodo chiamato get(), non prende in input e restituisce
+  un valore di tipo T.
+
+  Supplier<String> s = s->s.repeat(2);

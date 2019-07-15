@@ -1,0 +1,61 @@
+Fornisce un modo uniforme per chiamare sia oggetti semplici sia oggetti aggregati
+in modo tale che il client non deve fare distinzioni tra chiamata ad oggetti semplice
+ed oggetto composto.
+
+Esempio: se ho un ide che mi permette di disegnare delle figure geometriche e mi permette anche di ridimensionarle
+e/o spostarle potrei avere la necessità di aggregare due figure disegnate e poi successivamente spostarle/ridimensionarle
+contemporaneamente come se fosse un'unica figura
+
+Composizione ricorsiva: all'interno di un aggregato potrei trovare altri oggetti aggregati
+
+La soluzione consta di:
+
+  Classe Component: è una classe abstract
+
+  Classe Leaf: classe che rappresenta elementi semplici, essa implementa il comportamento di questi oggetti
+
+  Classe Composite: classe che contiene una lista di oggetti semplici di tipo component in modo da legarci
+  all'interfaccia più generale permettendoci così di lavorare anche con aggregati di aggregati e non solo
+  con tipi semplici, implementa un metodo per implementare il comportamento
+  di ogni tipo di oggetti che contiene la sua lista
+
+Potremmo implementare direttamente i metodi per modificare la lista direttamente su Composite o dichiararli in
+Component senza implementarli.
+
+Tuttavia implementarli solo in Composite non ci permetterà di avere la trasparenza in quanto le operazioni da
+effettuare sulla lista non sono conosciute dal Client visto che si lega solo a Component (che non presenta i metodi)
+e quindi dovrà legarsi anche a Composite.
+
+La seconda soluzione è invece dichiarare i metodi nella classe Component ed implementare opportunamente i metodi
+anche su Leaf oltre che su Composite, cercando di gestirlo al meglio. Infatti non avrebbe senso chaimare questi
+metodi all'interno di Leaf. Quindi c'è meno sicurezza.
+Oppure potrei implementare add nel component legandomi al tipo semplice e all'interno di Composite fare un
+overriding facendo gestire il comportamento.
+
+Posso predisporer un metodo che mi ritorna un elemento semplice all'interno di un aggregato.
+
+La lista deve essere contenuta in COmposite e non in Component in modo da non sprecare spazio visto
+che leaf non lo utilizzerebbe mai
+
+L'ordine degli elementi potrebbe essere importante per l'implementazione e deve essere tenuto in considerazione
+
+Potremmo avere una memoria cache in modo tale da ammortizzare il costo delle operazioni.
+Se abbiamo un programma in cui gli oggetti semplici sono i prodotti e l'aggregato è il carrello, se vogliamo
+calcolare il costo totale dovremmo nuovamente scorrere la lista e calcolare. Se invece predisponiamo un attributo
+CostoTotale potremmo ogni volta memorizzare il valore all'inserimento di un elemento e poi sommarlo a quello succesivo
+
+Se faccio delle operazioni sull'aggregato(ad esempio ridimensionare un oggetto semplice) devo modificare la
+memoria cache così da restare sincronizzato con i dati.
+
+Tante classi possono svolgere lo stesso ruolo. (Es file, image, documents saranno tutti leaf)
+
+Per istanziare gli oggetti di tipo component potrei utilizzare un factory method così da decidere se istanziare
+un leaf o un composite
+
+          |COMPONENT|<_____________________
+               ^                          |
+               |                          |
+               |                          |
+          __________                      |
+          |        |                      |
+       |LEAF|  |COMPOSITE|<>________________

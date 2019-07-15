@@ -1,0 +1,58 @@
+Si può utilizzare il metodo .generate() a posto di .of().
+Possiamo passare una funzione a generate().
+
+si può utilizzare il metodo .forEach(action) per oggetti all'interno dello stream.
+
+.peek(System.out::println) utilizzarlo principalmente per stampare il valore corrente
+
+contare tutti i libri CYBERPUNK:
+
+long c = Stream.generate(Libro::gen)
+               .limit(10)
+               .filter(x-> x.getCategoria() == Categoria.CYBERPUNK)
+               .count()
+
+restituire la lista dei titoli dei libri CYBERPUNK o FANTASY
+
+List<String> list = Stream.generate(Libro::gen)
+               .limit(10)
+               .filter(x-> x.getCategoria() == Categoria.CYBERPUNK
+                           || x.getCategoria() == Categoria.FANTASY)
+               .map(Libro::getTitolo)
+               .collect(Collectors.toList());
+list.forEach(System.out::println);
+
+restituire la somma del costo di tutti i libri:
+
+int costi = Stream.generate(Libro::gen)
+                  .limit(10)
+                  .map(Libro::getPrezzo)
+                  .reduce(0, Integer::sum);
+
+restituire la somma in dollari dei costi di tutti i libri con il cambio eur dollaro a 1.12:
+double costi = Stream.generate(Libro::gen)
+                  .limit(10)
+                  .map(x-> x.getPrezzo() * 1.12)
+                  .reduce(0.0, Double::sum);
+
+stampa tutti i libri con prezzo tra 10 e 15:
+Stream s = Stream.generate(Libro::gen)
+                 .limit(10)
+                 .map(Libro::getPrezzo)
+                 .filter(x -> x>=10 && x<=15)
+                 .peek(System.ou::println)
+
+titolo del libro meno caro (a partire da 12e):
+Optional<String> mc = Stream.generate(Libro::gen)
+                  .limit(10)
+                  .map(Libro::getPrezzo)
+                  .min(Comparator::comparing);
+
+stampa la lista dei libri ordinata per prezzo:
+List<Libri> list = Stream.generate(Libro::gen)
+                         .limit(10)
+                         .map(Libro::getPrezzo)
+                         .sorted(Comparator::comparing)
+totale vendite per ogni libro venduto:
+
+libro cyberpunk più venduto:

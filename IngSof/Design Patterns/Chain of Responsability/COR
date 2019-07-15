@@ -1,0 +1,5 @@
+Evitare di accoppiare il mandante di una richiesta con il ricevente dando la possibilità
+a più di un oggetto di gestire la richiesta. Concatena gli oggetti riceventi e passa la richiesta
+fino a che un oggetto la gestisca o fino a che la catena non finisce.
+
+Svincolo un po' la classe mittente dalla classe ricevente
