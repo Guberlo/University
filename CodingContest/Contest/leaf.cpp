@@ -81,7 +81,7 @@ private:
 
   int _foglie(Node<H>* y){
     if(!y)  return 0;
-    if(y->getLeft() || y->getRight()) return (_foglie(y->getLeft()) + _foglie(y->getRight()));
+    if(y->getLeft() || y->getRight()) return _foglie(y->getLeft()) + _foglie(y->getRight());
     else return 1;
   }
 
