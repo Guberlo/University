@@ -1,0 +1,5 @@
+implementare una queue con due stack:
+
+Utilizzare uno stack per il solo inserimento, la enqueue consiste in una push sul primo stack
+La dequeue consiste nel travaso del primo stack nel secondo in caso che sia vuoto e procedere alla pop su questo stack
+Se il secondo stack non è vuoto non bisogna fare il travaso.

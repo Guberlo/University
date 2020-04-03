@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1513088666 source:/home/guberlo/Documenti/code/Campisano/main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+

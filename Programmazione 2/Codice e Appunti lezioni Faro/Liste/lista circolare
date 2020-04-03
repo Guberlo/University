@@ -1,0 +1,4 @@
+Nelle liste circolari non esistono coda e testa. Non sarà mai effettivamente ordinata
+in quanto non si verificherà che tutti gli elementi saranno minori del successivo.
+
+Vi è un accesso in un punto della lista che rappresenta la"testa".

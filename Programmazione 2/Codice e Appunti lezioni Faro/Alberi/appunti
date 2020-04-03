@@ -1,0 +1,88 @@
+un albero si dice completo quando le foglie si trovano tutte allo stesso livello
+e tutti i livelli sono completi
+
+altezza albero: cammino dalla foglia alla radice dell'albero, può essere calcolata come log(n)
+
+in ogni livello ci saranno 2^n nodi dove n è livello dell'albero (per un albero completo)
+
+Non posso consocere a prescindere l'altezza dell'albero ma posso limitarla superiormente o minormente
+considerano i casi migliori o peggiori  log(n) <= h <= n-1
+
+Un nodo di un albero sarà composto come un oggetto nodo che contiene una chiave,
+un puntatore ad un oggetto nodo left, uno right ed un puntatore al parent
+
+più generalmente per alberi n-ari la struttura sarebbe:
+puntatore a first son(primo nodo figlio a sinistra), puntatore a brother, puntatore a parent
+
+Tenere l'altezza il più basso possibile aiuta a mantenere una maggiore efficienza nelle operazioni
+svolte su di esso
+
+albero binario di ricerca
+
+deve essere binario e posizionale(i figli devono stare o a destra o a sinistra),
+non ha limitazioni come prima(no completo)
+definizione ricorsiva di un albero:
+un albero è un nodo che è collegato a due alberi (i figli) fino alle foglio che sono seguiti da due alberi vuoti
+
+la chiave contenuta nel figlio a sinistra deve essere minore di quella contenuta nella radice (tutto il sotto albero)
+la chiave contenuta nel figlio a destra deve essere maggiore di quella contenuta nella radice (tutto il sotto albero)
+
+per fare l'inserimento di un nodo faccio la ricerca per quell'elemento e quando trovo un nodo a null inserisco
+
+il successore di un nodo è il più piccolo tra gli elementi più grandi della chiave contenuta nella radice
+se un nodo ha un sottoalbero destro allora il successore sarà il minimo di quel sottoalbero,
+altrimenti bisogna risalire fino a trovare una chiave più grande
+nel caso peggiore O(n) in un caso medio O(log(n))
+
+il predecessore è il più grande tra gli elementi più piccoli della radice
+se un nodo ha un sottoalbero sinistro allora il predecessore sarà il massimo di quel sottoalbero
+altrimenti bisogna risalire fino a trovare un elemento più grande
+
+cominciare a mettere l'elemento più piccolo nell'ultima foglia a sinistra
+
+una visita è un modo per vedere tutti i nodi ma vederli solo una volta
+
+INORDER
+if x!=null
+ inorder(left(x))
+ print(key(x))
+ inorder(right(x))
+
+ stampa prima ricorsivamente tutti gli elementi più piccoli fino a quando left sarà null, poi stampa la x
+ se questo nodo ha un sotto albero destro controlla se ha un sotto albero sinistro fino a quando è null, lo stampa ecc
+
+ questa procedura prende O(n), passo per ogni nodo 3 volte
+
+ POSTORDER
+ if x!=null
+  postorder(left(x))
+  postorder(right(x))
+  print(key(x))
+
+  vado al minimo, lo stampo, controllo il right, lo stampo e risalgo
+
+  PREORDER
+  if x!=null
+  print(key(x))
+  preorder(left(x))
+  preorder(right(x))
+
+  stampo, vado a sinistra, stampo, vado a sinsitra fino al minimo e stampo, controllo a destra, stampo, controllo a sinistra
+
+  CANCELLAZIONE:
+
+  CASO 1:
+  il nodo da cancellare è una foglia:
+    -si elimina la foglia e si toglie il collegamento col parent
+
+  CASO 2:
+    -non è una foglia ma ha solo un figlio, si elimina e si setta il parent del figlio al parent del nodo eliminato
+
+  CASO 3:
+    -un nodo ha due figli, vado a prendere il nodo successore del nodo eliminato
+    e lo sostituisco al nodo eliminato eliminandolo dalla sua precedente posizione
+
+OPERAZIONE DI ROTAZIONE:
+l'importante è che il left di x(dove applico la rot) deve esistere
+quello che succede è che left prende il posto di x e diventa la radice
+il right di y diventa il left di x 

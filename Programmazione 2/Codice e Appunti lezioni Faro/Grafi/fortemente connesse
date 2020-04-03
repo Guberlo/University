@@ -1,0 +1,8 @@
+sottoinsieme massimale di nodi che sono mutualmente raggiungibili uno dall'altro
+
+In un grafo aciclico direzionato le componenti fortemente connesse sono pari al numero di vertici
+
+Il grafo delle componenti connesse deve essere necessariamente aciclico altrimenti vuol dire che quelle componenti
+sono collegate e quindi vale come una sola componente
+
+facciamo la dfs, facciamo la matrice trasposta delle connessioni 
