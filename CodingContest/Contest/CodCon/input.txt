@@ -1,3 +1,0 @@
-int 10 ins:18 ins:45 ins:30 ins:140 ins:101 ins:64 ins:230 ins:223 ins:290 ins:75 64 230
-int 10 ins:63 ins:72 ins:136 ins:133 ins:94 ins:132 ins:268 ins:246 ins:168 ins:211 94 63
-int 10 ins:190 ins:102 ins:199 ins:129 ins:84 ins:91 ins:90 ins:66 ins:207 ins:226 66 129

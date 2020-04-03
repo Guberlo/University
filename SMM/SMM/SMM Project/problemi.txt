@@ -1,6 +1,0 @@
-Problemi della raccolta di dati:
-
-Ci sono 45 utenti None (bannati o non autenticati)
-Pochi utenti hanno espresso un'opinione per più di un prodotto (solamente 23)
-Alcuni commenti non vengono analizzati correttamente, tuttavia i commenti negativi vengono quasi sempre analizzati
-come tali.

@@ -1,7 +1,0 @@
-Ad una festa partecipa una star del cinema.
-Tutti la conoscono, lei non conosce nessuno.
-L'obiettivo è individuare la star chiedendo solo domande del tipo "Conosci lui/lei?"
-
-Dimostrare che esiste una solo star.
-Trovare strategia per individuare la star.
-Trovare una strategia che richieda un massimo di O(n) domande.

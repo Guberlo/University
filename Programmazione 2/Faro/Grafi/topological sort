@@ -1,7 +1,0 @@
-Ordinamento di un grafo:
-Disposizione dei nodi su una linea dal più piccolo al più grande. Decidiamo noi chi è più grande
-però abbiamo un piccolo vincolo:
-  Questo ordinamente è fortemente legato alla disposizione dei nodi nel grafo.
-  Se esite un arco da u a v si deve rispettare la proprietà u<v
-
-  Se ci sono cicli non si può fare

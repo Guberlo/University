@@ -1,6 +1,0 @@
-tecnica delle sentinelle:
-le sentinelle sono due nodi speciali che mettiamo all'inizio e alla fine della lista
-essi non contengono nessuna chiave. Il primo lo chiamiamo header e l'altro trailer
-Non ci serviranno più head e tail. Header e tailer verranno aggiunti alla lista.
-Il primo elemento della lista sarà il successivo dell'header e l'ultimo elemento
-sarà il predecessore del tailer. Grazie a questo eliminiamo tutti i casi specifici 

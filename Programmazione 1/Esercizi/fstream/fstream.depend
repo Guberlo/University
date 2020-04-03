@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1521903224 source:/home/guberlo/Documenti/code/fstream/main.cpp
-	<iostream>
-	<fstream>
-
