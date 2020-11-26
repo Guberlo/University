@@ -20,10 +20,13 @@ int sample = 50;
 
 void* t_func(void* arg) {
     int x = 0;
-    char* t = (char*) arg;
+    int len = sizeof(arg);
+    char t[len];
+    sprintf(t, "%s", (char*) arg);
 
     while(1) {
-        x = rand() % 90 + 10;
+
+        x = rand() % (91 - 10) + 10;
 
         pthread_mutex_lock(&mutex);
         printf("\nSono il thread %s: sample valeva %d, adesso vale %d", t, sample, x);
@@ -46,15 +49,18 @@ void* t_func(void* arg) {
 int main(int argc, char** argv) {
     srand(time(NULL));
 
-    pthread_t t1, t2;
+    pthread_t t1, t2, t3;
 
     pthread_create(&t1, NULL, t_func, (void*) "t1");
     pthread_create(&t2, NULL, t_func, (void*) "t2");
+    pthread_create(&t3, NULL, t_func, (void*) "t3");
 
     pthread_join(t1, NULL);
     pthread_join(t2, NULL);
+    pthread_join(t3, NULL);
 
-    printf("\nESECUZIONE TERMINATA\n");
+    printf("\nESECUZIONE TERMINATA: %d\n", sample);
+    pthread_mutex_destroy(&mutex);
 
     return 0;
 }
