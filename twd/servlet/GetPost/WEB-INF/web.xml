@@ -1,0 +1,13 @@
+<web-app>
+
+    <servlet>
+        <servlet-class>HTTPGetServlet</servlet-class>
+        <servlet-name>HTTPGetServlet</servlet-name>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HTTPGetServlet</servlet-name>
+        <url-pattern>/GetServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
