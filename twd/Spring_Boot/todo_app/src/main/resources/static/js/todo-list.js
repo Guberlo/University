@@ -29,9 +29,9 @@ function insertTableData(data) {
         tr.innerHTML = '<td>' + todo.description + '</td>' +
                     '<td>' + todo.date + '</td>' +
                     '<td><a type="button" class="btn btn-success" \
-                    href="/update-todo?id=${todo.id}">Update</a></td>' +
+                    href="/Todo" id="btn-update">Update</a></td>' +
                     '<td><a type="button" class="btn btn-warning" \
-                    href="/delete-todo?id=${todo.id}">Delete</a></td>';
+                    href="/Todo" id="btn-delete">Delete</a></td>';
         tbody.appendChild(tr);
     })
 }
