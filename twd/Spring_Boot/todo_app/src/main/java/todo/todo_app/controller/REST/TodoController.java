@@ -84,8 +84,18 @@ public class TodoController {
     public ResponseEntity<Todo> updateTodo(@Valid @RequestBody Todo e) {
         if(e.getId() == null)
             return ResponseEntity.badRequest().build();
-        Todo entity = service.updateTodo(e);
-        return ResponseEntity.ok().body(entity);
+
+        String user = SecurityContextHolder.getContext().getAuthentication().getName();
+        List<Todo> list = service.getTodoByUsername(user);
+
+        for(Todo todo : list) {
+            if(todo.getId() == e.getId()) {
+                Todo entity = service.updateTodo(e);
+                return ResponseEntity.ok().body(entity);
+            }
+        }
+
+        return ResponseEntity.notFound().build();
     }
     
     // <!-- FIX THIS TO PERMIT ONLY TO USER !-->
@@ -94,8 +104,18 @@ public class TodoController {
     public ResponseEntity<Void> deleteTodo(@PathVariable Long id) {
         if(!service.getTodo(id).isPresent())
             return ResponseEntity.badRequest().build();
-        service.deleteTodo(id);
-        return ResponseEntity.ok().build();
+
+        String user = SecurityContextHolder.getContext().getAuthentication().getName();
+        List<Todo> list = service.getTodoByUsername(user);
+    
+        for(Todo todo : list) {
+            if(todo.getId() == id) {
+                service.deleteTodo(id);
+                return ResponseEntity.ok().build();
+            }
+        }
+    
+        return ResponseEntity.notFound().build();
     }
 
 }
