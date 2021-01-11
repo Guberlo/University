@@ -43,7 +43,7 @@ This is a project developed for TSDW course at University of Catania. It shows h
 - *Auth:* **/api/auth**
 
 | Enpoint | Method |  Body (Parameters) | Description |  
-| :------- | :------- | :------- | :------- | :------- |
+| :------- | :------- | :------- | :------- | 
 | **/signin** | *POST* | username, password  | Log an already registered user |
 | **/signup** | *POST* | email, name,  password, username | Register new user |
 | **/logout** | *GET* | JwtToken | Log out logged user |  
@@ -51,14 +51,14 @@ This is a project developed for TSDW course at University of Catania. It shows h
 - *User:* **/api/user**
 
 | Enpoint | Method |  Auth (Parameters) | Description |  
-| :------- | :------- | :------- | :------- | :------- |
+| :------- | :------- | :------- | :------- |
 | **/info** | *GET* | JwtToken | Shows info about user, need to have role USER |
 | **/list** | *GET* | JwtToken | Shows info about all users, need to have role ADMIN |
 
 - *Todo:* **/api/**
 
  Enpoint | Method |  Body (Parameters) | Description | 
-| :------- | :------- | :------- | :------- | :------- |
+| :------- | :------- | :------- | :------- |
 | **/Todo** | *GET*  | JwtToken | Get all todos, need to have role ADMIN |
 | **/Todo/id** | *GET*  | JwtToken, todoID | Get todo by id if exists , need to have role ADMIN |
 | **/users/Todo** | *GET*  | JwtToken | Get all logged user todos, need to have role USER |
