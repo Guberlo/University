@@ -126,6 +126,7 @@ void palindrome_check(int queue) {
 
         if(flag) {
             // Send a message containing only palindrome word
+            printf("\033[36;1m%s is palindrome!\033[0m\n", mex.mtext);
             mex.mtype = 2;
             mex.eof = 0;
             strncpy(mex.mtext, mex.mtext, STRLEN);
@@ -133,7 +134,6 @@ void palindrome_check(int queue) {
             retcode = msgsnd(queue, &mex, sizeof(mex), 0);
             check_err(retcode, "msgsnd");
         }
-            printf("\033[36;1m%s is palindrome!\033[0m\n", mex.mtext);
     }
 
     // Send EOF
